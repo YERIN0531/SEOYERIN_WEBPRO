@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table {
+            background-color: #00ffff;
+            margin: 10px 0px; /*margin 밖여백 : 위, 오른쪽, 아래 , 왼쪽 */
+        }
+        tr {
+            background-color: #FFFFFF;
+        }
+
+        td {
+            /* padding은 안여백 / 위,오른쪽,아래,왼쪽 따로따로 순서대로 지정도 가능하지만 한번에도 가능*/
+            padding: 5px 10px 4px 20px; /*안여백 : 위, 오른쪽, 아래, 왼쪽 */
+            padding: 10px;
+            padding: 5px 10px;
+            text-align: center; /*표 안에 가운데 정렬*/
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <caption><h2>&lt;customer list&gt;</h2></caption>
+        <tr>
+            <th>ID</th>
+            <th>이름</th>
+            <th>전화</th>
+            <th>구매누적</th>
+            <th>레벨</th>
+            <th>추천구매액</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>홍길동</td>
+            <td>010-9999-9999</td>
+            <td>50,000</td>
+            <td>NORMAL</td>
+            <td>950,000</td>
+
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>김길동</td>
+            <td>010-8888-8888</td>
+            <td>850,000</td>
+            <td>NORMAL</td>
+            <td>150,000</td>
+
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>김길동</td>
+            <td>010-7777-7777</td>
+            <td>400,000</td>
+            <td>NORMAL</td>
+            <td>600,000</td>
+
+        </tr>
+
+        <tr>
+            <td colspan="6">이상 3명</td>
+        </tr>
+    </table>
+</body>
+</html>

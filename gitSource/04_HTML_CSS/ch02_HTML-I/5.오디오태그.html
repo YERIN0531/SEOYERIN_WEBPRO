@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!--p쓰는 이유 : 블럭테이블이 아니기 때문에 띄어주기 위해서-->
+    <!--controls를 써야 버튼 생성-->
+    <!--proload 는 데이터를 받으면서 실행하면 오래걸리니, 미리 확땡겨와서 넣어라-->
+    <!--loop는 오디오가 끝나면 다시 시작(브라우저마다 다르게 적용됨)-->
+    <p>
+        스티브 잡스 연설문 전반부<br />
+        <audio src="sound/stevejobs1.mp3" controls="controls" loop="loop" preload="auto">
+        </audio>
+    </p>
+
+    <!--소스를 따로 빼서 선언해줘도 됨 -->
+    <p>
+        <audio controls="controls" loop="loop">
+            <source src="sound/stevejobs2.mp3" />
+
+        </audio>
+    </p>
+</body>
+</html>

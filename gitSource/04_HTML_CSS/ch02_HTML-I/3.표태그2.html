@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table{background-color : red;}
+        tr   {background-color : yellow;}
+        caption{background-color : lightyellow}
+    </style>
+</head>
+<body>
+
+    <table>
+        <caption>table ex1</caption>
+        <tr>
+            <th>국어</th> <!-- td대신 th 쓰면 글씨 진하게 가운데 정렬해주는 것 -->
+            <th>영어</th>
+            <th>수학</th>
+        </tr>
+
+        <tr>
+            <td>100</td>
+            <td>60</td>
+            <td>80</td>
+        </tr>
+    </table>
+
+    <table>
+        <caption>table ex2</caption>
+        <tr>
+            <th>국어</th> <!-- td대신 th 쓰면 글씨 진하게 가운데 정렬해주는 것 -->
+            <th>영어</th>
+            <th>수학</th>
+        </tr>
+
+        <tr>
+            <td>100</td>
+            <td>60</td>
+            <td>80</td>
+        </tr>
+
+        <tr>
+            <th colspan="2">평균</th>
+            <td>80</td>
+        </tr>
+    </table>
+
+    <table>
+        <caption>table ex3</caption> <!--3행4열-->
+        
+        <tr>
+            <th rowspan="3">중간고사성적</th>
+            <th>국어</th> <!-- td대신 th 쓰면 글씨 진하게 가운데 정렬해주는 것 -->
+            <th>영어</th>
+            <th>수학</th>
+        </tr>
+
+        <tr>
+            <td>100</td>
+            <td>98</td>
+            <td>99</td>
+        </tr>
+
+        <tr>
+            <th colspan="2">평균</th>
+            <td>99</td>
+        </tr>
+    </table>
+
+    <table><!--4행 6열-->
+        <caption>자바 개발자 양성과정</caption>
+        <tr>
+            <th>Java</th>
+            <th>DB</th>
+            <th>HTML/CSS</th>
+            <th>JavaScript(jQuery)</th>
+            <th>JSP</th>
+            <th>Spring</th>          
+        </tr>
+    
+        <tr><!--2행-->
+            <td rowspan="3">
+            <ol>
+            <li>JAVA란?</li>
+            <li>변수</li>
+            <li>연산자</li>
+            <li>제어문</li>
+            <li>배열</li>
+            </ol>
+            </td>
+
+            <td rowspan="3">
+                <ol>
+                    <li>DB와 DBMS</li>
+                    <li>Select문</li>
+                    <li>JOIN 연습문제</li>
+                    <li>단일행함수</li>
+                </ol>
+            </td>
+            <td>개론</td>
+        </tr>
+        
+        <tr><!--3행-->
+            
+        </tr>
+        
+        <tr><!--4행-->
+            
+        </tr>
+
+
+    </table>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
