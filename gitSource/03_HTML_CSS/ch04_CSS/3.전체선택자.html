@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{/*전체 선택자 : 모든 태그에 적용 [전체 페이지 디자인 초기화 용도]*/
+          margin:0;  /*밖여백*/
+          padding:0; /*안여백*/
+          color : saddlebrown;
+          /* 페이지 내 기본 폰트 설정도 할 수 있음 */          
+        }
+        header,nav,section,footer{
+            width:500px;/*가로사이즈 - 얘 안쓰면 100프로 다 씀*/
+            margin:10px auto; /*위 오른쪽 아래 왼쪽*/
+            border:1px solid gray;
+        }
+        header h1{
+            text-align:center;
+        }
+
+        /*수직 메뉴를 수평메뉴로 - 수직 li를 수평 li로 만들거*/
+        nav ul {overflow:hidden;}/*수평으로 하고 픈 태그의 부모단*//*내 자식들끼리만 float:left 하겠다 라는 선언*/
+            nav ul li {
+                float: left; /*block타입태그를 수평으로 배치*/
+                list-style: none;
+                /*padding : 10px 30px;/*10px 20px 10px 20px 상우하좌 안여백*/ 
+                width:125px;/*전체 width / 메뉴갯수 하면 됨. width를 주지 않으면 nav,ul은 500을 따르고 있는 상태니까*/
+                text-align : center;
+            }
+        section{
+            clear:both; /*overflow : hidden; 을 잘 했으면 생략하기도 함*/
+
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>00 주식회사</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>회사소개</li>
+            <li>서비스</li>
+            <li>고객센터</li>
+            <li>공지사항</li>
+        </ul>
+    </nav>
+    <section>
+        <p>
+            찬미를 방지하는 심장의 뭇 사랑의 끓는 끓는다. 그들의 하는 영원히 가치를 용감하고 피어나기 살 약동하다. 보배를 만천하의 이것이야말로 내는 같지 충분히 오직 같으며, 방지하는 말이다. 피어나는 이상, 수 그들의 있는가? 이것을 붙잡아 구하기 위하여, 품고 과실이 행복스럽고 부패뿐이다. 영락과 창공에 인간에 내는 그들에게 광야에서 있는가? 웅대한 풍부하게 간에 듣는다. 옷을 많이 거선의 우는 새 자신과 것이다. 청춘의 따뜻한 커다란 약동하다.
+        </p>
+    
+    </section>
+    <footer>
+        <p>
+            서울시 강남구 강남대로94길 13 좋은빌딩 402호
+        </p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
