@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table{
+            background-color : black;
+        }
+        tr{ background-color : white;}
+        td{
+            text-align:center; /*글씨 가운데 정렬*/
+            padding : 5px;    /* 안여백 */
+        }
+    </style>
+</head>
+<body>
+    <!-- form <p> 안에 name 은 꼭 넣어주자 -->
+    <!--input type = "text" : 한줄 넣어주는 애 -->
+    <!-- 테이블 안쓸 경우 안예쁘게 나옴-->
+    <form>
+        <p>아 이 디<input type="text" name="uid" /></p>
+        <p>비 밀 번 호 <input type="text" name="upw" /></p>
+    </form>
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <!--테이블 안에 넣어줬을 경우 -->
+    <!-- action 을 통해 내가 들어가고 싶은 url 쓰면 되는데, jsp 넣으면 되지만 아직 jsp 안배웠으니 아무 url 넣기-->
+    <!-- method="get" 도 해주기 -->
+    <!-- name = ""에 들어가는건 action으로 넘길 변수의 이름 = 파라미터 이름-->
+    별 &nbsp; 명 : <input type=" text" name="nickname" /><br />
+    <!-- form 태그 밖에 위 처럼 input 쓰는건 의미없음. form에 있는 action 넘어가는게 목적이니까-->
+    
+    <form action="#" method="get" ><!--ㅡmethod="get"이 기본 안쓰면 get으로 자동 세팅-->
+        <table>
+            <caption>로그인</caption>
+            <tr>
+                <td>아 이 디</td>
+                <td><input type="text" name="uid" /></td>
+            </tr>
+
+            <!--type="password"로 해주면 친 text가 별로 변환됨-->
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="password" name="upw" /></td>
+            </tr>
+
+            <tr>
+                <!--3행1열-->
+                <!--버튼을 가운데로 옮기기 위해 열 병합 해주기-->
+                <!--type = submit 하면 name 에 적힌 부분으로 내가 입력한 값이 날라감 -->
+                <!-- value 내가 만든 버튼의 이름 -->
+                <!-- 버튼을 누르면 내가 action이 입력한 곳으로 들어감-->
+                <td colspan="2">
+                    <input type="submit" value="로그인" />
+                </td>
+                <!--3행2열-->
+                <!--3행3열-->
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

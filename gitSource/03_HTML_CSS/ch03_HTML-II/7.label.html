@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        b{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <form >
+        <fieldset>
+            <legend>회원 정보</legend>
+            <ul>
+                <li>
+                    <label for="name">이&nbsp;름<b>*</b></label>
+                    <input type="text" name="name" id="name" autofocus="autofocus" required="required"/>
+                </li>
+                <li>
+                    <label for="id">아이디<b>*</b></label>
+                    <input type="text" name="id" id="id" required="required"/>
+                </li>
+                <li>
+                    <label for="pw">비밀번호<b>*</b></label>
+                    <input type="password" name="pw" id="pw" required="required" />
+                </li>
+                <li>
+                    <label for="tel">전화<b>*</b></label>
+                    <input type="tel" name="tel" id="tel" required="required"/>
+                </li>
+                <li>
+                    사용기술
+                    <input type="checkbox" name="check" value="java" id="java" />
+                    <label for="java">자바</label>
+                    <input type="checkbox" name="check" value="dbms" id="dbms" />
+                    <label for="dbms">dbms</label>
+                    <input type="checkbox" name="check" value="html" id="html" />
+                    <label for="html">html</label>
+                    <input type="checkbox" name="check" value="jsp" id="jsp" />
+                    <label for="jsp">jsp</label>
+                </li>
+                <li>
+                    성 별
+                    <input type="radio" name="gender" value="m" id="m" /><label for="m">남자</label>
+                    <input type="radio" name="gender" value="f" id="f" /><label for="f">여자</label>
+                </li>
+                <li>
+                    <label for="mail">메일<b>*</b></label>
+                    <input type="email" name="mail" id="mail" />
+                </li>
+            </ul>
+            <p>
+                <center><input type="submit" /></center>
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>

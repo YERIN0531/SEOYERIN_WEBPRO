@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        td{
+            text-align : center;
+            padding : 2px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="get">
+        <table>
+            <!--1행-->
+            <tr>
+                <td>아 이 디</td>
+                <td><!--한열에 input 2개 넣기-->
+                    <input type="text" name="uid" size="9"/>
+                    <input type="button" value="중복확인" onclick="alert('중복확인 test')" />
+                </td>
+            </tr>
+
+            <!--2행-->
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="password" name="pw" /></td>
+            </tr>
+
+            <!--3행-->
+            <tr>
+                <td>전화번호</td>
+                <!--전화만 입력해야하니 type = tel -->
+                <!--3개 나와야 하니 input3개 -->
+                <td><input type="tel" name="phone1" size="2" />-
+                    <input type="tel" name="phone2" size="2" />-
+                    <input type="tel" name="phone3" size="2" /></td>
+            </tr>
+
+            <!--4행-->
+            <!-- number은 min값과 max값을 넣을 수 있다는 장점이 있음 -->
+            <!-- number은 대신 사이즈 조정이 불가하기 때문에 css를 통해 조정해야됨-->
+            <tr>
+                <td>경력</td>
+                <td><input type="number" name="career" min="0" max="45"  /></td>
+
+            </tr>
+
+            <!--5행-->
+            <!--mail을 치면 @들어가야됨-->
+            <tr>
+                <td>이메일</td>
+                <td><input type="email" name="email" /></td>
+            </tr>
+
+            <!--6행-->
+            <tr>
+                <td>사진</td>
+                <td><input type="file" name="filename" /> </td>
+            </tr>
+      
+
+            <!--7행-->
+            <!--파라미터 이름 동일하게 적용해주기-->
+            <!--value에 있는 애가 넘어가는 것 -->
+            <tr>
+                <td>성별</td>
+                <td>
+                    <input type="radio" name="gender" value="m" checked="checked"/>남
+                    <input type="radio" name="gender" value="f" />여
+                </td>
+            </tr>
+            
+            <!--8행-->
+            <tr>
+                <td>사용언어</td>
+                <td>
+                    <input type="checkbox" name="lang" value="kor" checked="checked" />한국어
+                    <input type="checkbox" name="lang" value="eng" />영어
+                    <input type="checkbox" name="lang" value="chi" />중국어
+                    <input type="checkbox" name="lang" value="ind" />인도어
+
+                </td>
+            </tr>
+            
+
+            <!--9행-->
+            <!--select는 자바에서 combox랑 동일-->
+            <!--radio처럼 하나만 선택해야하지만 유저 인터페이스만 좀 다를뿐-->
+            <!--option에 value를 생략하면 value는 자동으로 대한민국/미국으로 설정-->
+            <!--option은 value 안만들어도 되긴함 / radio, checkbox는 value 꼭 써줘야함-->
+            <tr>
+               
+                <td>국적</td>
+                <td>
+                    <select name="nation">
+                        <option value="kor">대한민국</option>
+                        <option  >미국</option>
+                    </select>
+                </td>
+            </tr>
+
+            <!--10행-->
+            <!--multiple을 해줘야 여러개 선택 or 아무것도 선택안하기 가능-->
+            <!--한 화면에 보이고 싶지 않으면 size설정하면 스크롤 생성-->
+            <tr>
+                <td>좋아하는음식</td>
+                <td>
+                    <select name="food" multiple="multiple" size="3">
+                        <option> 김치찌개 </option>
+                        <option> 된장찌개 </option>
+                        <option> 섞어찌개 </option>
+                        <option> 부대찌개 </option>
+                    </select>
+                </td>
+            </tr>
+
+            <!--11행-->
+            <tr>
+                <td>자기소개</td>
+                <td>
+                    <textarea name="intro" cols="25" rows="3"></textarea>
+                </td>
+            </tr>
+
+            <!--12행-->
+            <!--크롬에선 잘 먹지만 다른 브라우저에선 잘안먹을수 있음 -->
+            <tr>
+                <td>생년월일</td>
+                <td><input type="date" name="birth" /></td>
+            </tr>
+
+            <tr>
+                <td>sns url</td>
+                <td><input type="url" name="sns" /></td>
+            </tr>
+
+            <tr>
+                <td>좋아하는색상<br />좋아하는정도</td>
+                <td>
+                    <input type="color" name="color" />
+                    0<input type="range" name="range" min="0" max="100" step="10" />100
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="회원가입"/>
+                    <input type="reset" value="초기화" />
+                    <!--가끔 reset 안될수가 있음.. 어떤 브라우저냐에 따라 달라-->
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

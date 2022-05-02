@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        td{
+            border-top : 1px solid aqua;
+            text-align:center;
+            padding:5px;
+        }
+    </style>
+    <script>
+        /* form안의 title은 한글자 이상, name은 두글자 이상 입력했는지 여부 판단 
+        = frm.title.value가 한글자 이상, frm..name.value.length > 1 
+        = frm.title.value가 ""이거나 frm.name.value.length=1이면 떼끼! (submit 불가 )
+        
+        */
+        function chk() {
+            if (frm.name.value.length < 2) {
+               alert('이름은 두글자 이상을 입력해주세요');
+                frm.name.focus();
+                return false;
+
+            }
+            return true; //생략가능
+        }
+    </script>
+</head>
+<body>
+
+    <form name="frm" onsubmit="return chk()"> <!--onsubmit (서브밋이 일어날때) 위에 입력한 functtion의 chk가 return 되라-->
+    <!--5행2열-->
+        <table>
+            <caption><h2>게시판</h2></caption>
+            <tr>
+                <td>제목</td>
+                <td><input type="text" name="title" size="30" required="required" autofocus="autofocus"/></td>
+                <!--required : 필수입력 사항이다 / autofofcus : 포커스가 자동적으로 설정-->
+            </tr>
+            <tr>
+                <td>작성자</td>
+                <td><input type="text" name="name" size="30"  /></td>
+            </tr>
+            <tr>
+                <td>본문</td>
+                <td>
+                    <textarea name="content" rows="5" cols="32"></textarea> <!--textarea는 엔터치면 안됨-->
+                </td>
+            </tr>
+            <tr>
+                <td>첨부파일</td>
+                <td><input type="file" name="filename" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" >
+                    <input type="submit" value="입력완료" />
+                    <input type="reset" value="입력취소" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

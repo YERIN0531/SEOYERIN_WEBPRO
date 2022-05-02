@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!--form태그 밖에 있는 아이는 전송안됨-->
+    전송 안되는 파라미터<input type="text" name="noMsg" />
+<form name="frm" onsubmit="return chk()">
+    <p>
+        전화<input type="tel" name="tel" placeholder="000-0000-0000"
+                 required="required"/>
+        <!--placehold는 입력하면 사라짐 -->
+    </p>
+    
+    <p>
+        카드<input type="text" name="cardno" placeholder="0000-0000-0000-0000" />
+    </p>
+
+    <p>
+        업무 <input type="text" name="job" list="joblist" />
+    </p>
+        <datalist id="joblist">
+            <option value="분석">분석</option>
+            <option>설계</option>
+            <option>구현</option>
+            <option>테스트</option>
+            <option>유지보수</option>
+        </datalist>
+    
+    <p>
+        업무
+        <select name="job2">
+            <option value="분석">분석</option>
+            <option>설계</option>
+            <option>구현</option>
+            <option>테스트</option>
+            <option>유지보수</option>
+
+        </select>
+    </p>
+    <input type="hidden" name="no" value="99" />
+    <!--hiddien 안나타 나지만 submit할때 value값 99가 넘어가게됨-->
+    <p>
+        <input type="submit" value="전송합니다" />
+    </p>
+</form>
+</body>
+</html>
