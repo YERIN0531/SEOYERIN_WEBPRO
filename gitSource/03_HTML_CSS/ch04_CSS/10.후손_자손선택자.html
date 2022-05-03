@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #header, #wrap, #footer{
+            width:600px;
+            margin: 0 auto;
+            border:1px solid gray;
+        }
+        #header{overflow:hidden;}
+        #header .logo{ /* 스페이스를 주면 : 후손선택자 */
+            float:left;
+            padding: 10px 30px 10px 150px;
+        }
+        #header > .name { /* 꺽새괄호를 주면 : 자손선택자 */
+            float: left;
+            padding: 15px 30px 10px 70px;
+        }
+        div p{ /* 후손선택자(div밑에 있는 모든p) */
+            font-size:25px; /*p태그의 기본 font-size는 16*/
+        }
+        div>p{ /* 자손선택자(div바로 밑에 있는 p) */
+            color:red;
+            font-size:16px;
+        }
+        #footer{text-align:center;}
+    </style>
+</head>
+<body>
+<div id="header">
+
+    <div class="logo">
+        <h1>LOGO</h1>
+    </div>
+
+    <div class="name">
+        <h2>강남 주식회사</h2>
+    </div>
+
+</div>
+
+<div id="wrap">
+
+    <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+
+    <ul>
+        <li><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></li>
+        <li><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></li>
+        <li><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></li>
+    </ul>
+
+</div>
+
+<div id="footer">
+
+    <p>서울시 강남구 역삼동 좋은빌딩 402호</p>
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

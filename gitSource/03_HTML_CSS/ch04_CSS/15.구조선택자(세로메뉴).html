@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div#nav{
+            width:200px;
+            margin:0 auto;
+            
+        }
+        #nav ul li{
+            border:1px solid gray;
+            list-style:none;
+            padding:10px;
+            margin:2px;
+            text-align:center;
+            font-size:20px;
+            font-weight:bold;   
+        }
+        #nav ul li a{text-decoration:none; color:black;}
+        #nav ul li:nth-child(2n+1) {/*ul밑의 li들 중 홀수번째 요소들*/
+            background-color:orange;
+            }
+        #nav ul li:nth-child(2n){ /*ul밑의 li들 중 짝수번째 요소들*/
+            background-color:yellow;
+        }
+        #nav ul li:first-child{ /* ul 밑의 li들 중 첫번째 요소*/
+            border-radius: 20px 20px 0 0;
+           
+        }
+        #nav ul li:last-child{ /* ul 밑의 li들 중 마지막 요소*/
+            border-radius: 0 0 20px 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="nav">
+    <ul>
+        <li><a href="#menu1">menu1</a></li>
+        <li><a href="#menu2">menu2</a></li>
+        <li><a href="#menu3">menu3</a></li>
+        <li><a href="#menu4">menu4</a></li>
+        <li><a href="#menu5">menu5</a></li>
+        <li><a href="#menu6">menu6</a></li>
+        <li><a href="#menu7">menu7</a></li>
+        <li><a href="#menu8">menu8</a></li>
+    </ul>
+</div>
+</body>
+</html>

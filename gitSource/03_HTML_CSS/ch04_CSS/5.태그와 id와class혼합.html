@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div{border:1px solid lightgray;}
+        div#header{
+            width:600px; /*가로 사이즈 : 600px */
+            margin : 0 auto; /*header를 브라우저의 가운데로*/
+            background-color : yellow;
+            text-align:center;
+            text-decoration:underline;
+        }
+        div#wrap{
+            width:600px;
+            margin:0 auto;
+            background-color:aquamarine;
+            overflow:hidden; /* 수평으로 배치하고자 하는 태그의 부모단
+                                얘를 안하면? 높이가 없기 때문에 content,side_banner를 감싸지 않음
+                                즉 content,side_banner를 감싸겠다는 의미(내자식단만 float하겠다라는 선언)*/
+        }
+        div#wrap div#content {
+            width: 350px; /*content 영역 = 가로 350px * 테두리(2px) */
+            float: left; /*수평으로 배치하고자 하는 태그에 넣어야 하는 부분 */
+            text-align: center;
+            height:300px;
+                
+        }
+        div#wrap div#side_banner {
+            width:246px; /* #side_banner영역 = 가로(246px) + 테두리(2px)=248px */
+            float:left;
+            text-align:center;
+            height:300px;
+           
+        }
+        #wrap #content ul li.menu1{font-size:1.5em; /*글씨 크기를 원래 크기의 1.5배*/}
+        #wrap #content li.menu2, 
+        #wrap #content li.menu4{ font-weight:bold;}
+        #wrap #side_banner img{width:200px;}
+        img {
+            width: 200px;
+        }
+        #footer{
+            clear : both; /* float 속성을 더이상 받고 싶지 않고 제거 역할*/
+            width : 600px;
+            margin : 0 auto;
+            background-color:yellow;
+            text-align:center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>HEADER</h1>
+    </div>
+
+    <div id="wrap">
+        <div id="content">
+            <h2>content</h2>
+            <ul>
+                <li class="menu1 menu"> menu1</li>
+                <!--class이름은 두개도 설정 가능-->
+                <li class="menu2"> menu2</li>
+                <li class="menu1"> menu3</li>
+                <li class="menu4"> menu4</li>
+                <li class="menu1"> menu5</li>
+            </ul>
+            <ol>
+                <li class="menu1">menu1</li>
+                <li class="menu2">menu2</li>
+                <li class="menu1">menu3</li>
+            </ol>
+        </div>
+
+        <div id="side_banner">
+            <h2>BANNER</h2>
+            <a href="http://www.daum.net" target="_blank">
+                <img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png" alt="다음아이콘" />
+            </a>
+        </div>
+    </div>
+
+    <div id="footer">
+        <h1>FOTTER</h1>
+    </div>
+
+</body>
+</html>

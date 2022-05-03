@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        input:focus{
+            background-color:lightyellow;
+            border: 2px solid lightgreen;
+            outline:none;
+            border-radius : 3px 3px 3px 3px; /*좌상 우상 우하 좌하*/
+        }
+        input:enabled{color:green;}
+        input:disabled{color:red;}
+    </style>
+</head>
+<body>
+<form>
+    <!--파라미터 이름이 똑같을 경우 배열로 넘어감. jsp때 처리해주면 됨-->
+    이름<input type="text" name="name" /><br />
+    아뒤<input type="text" name="id" /><br />
+    생일<input type="text" name="birth" value="19901212" disabled="disabled" /><br />
+    비번<input type="password" name="pw" /><br />
+    <input type="submit"/>
+</form>
+</body>
+</html>
