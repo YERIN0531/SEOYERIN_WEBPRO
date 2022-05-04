@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+    #contain{
+    width:700px; 
+    margin:0 auto;
+    border:1px solid black;
+    }
+    #header{
+     height:50px;
+     line-height:50px;
+     text-align:center;
+     background-color:lightgray;
+     font-size:1.5em;
+     font-weight:bold;
+    }
+    #wrap{/*암말하지 않으면 부모단의 width와 동일*/
+    height:200px; /*height는 암말하지 않으면 필요한만큼만 쓰기 때문에 만들어주어라*/
+    position:relative; /* 자식요소의 절대 좌표 기준이 부모기준(자식요소는 부모밖으로 position 안됨)*/
+    }
+    #wrap #content1{/*왼쪽 10,10*/
+    width : 400px;
+    height : 180px;
+    background-color:red;
+    border:1px dashed green;
+    position:absolute; left:10px; top:10px;
+    z-index:99; /*z-index가 큰 값이 위로*/
+
+    }
+    #wrap #content2{/*오른쪽10,10*/
+    width : 320px;
+    height : 170px;
+    background-color:yellow;
+    border:1px dashed green;
+    position:absolute; right:10px; top:20px;
+    z-index:10; /*z-index가 작은 값이 아래로 */
+    }
+    #footer{
+     height:50px;
+     line-height:50px;
+     text-align:center;
+     background-color:lightgray;
+     font-size:1.5em;
+     font-weight:bold;
+    }
+
+    </style>
+</head>
+<body>
+<div id="contain">
+    <div id="header">HEADER</div>
+    <div id="wrap">
+        <div id="content1">content1</div>
+        <div id="content2">content2</div>
+    </div>
+    <div id="footer">FOOTER</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        /*블럭형 태그는 암말하지 않으면 부모단의 width를 다 씀*/
+        #wrap{width:800px; margin:0 auto;}
+        #header{ /* h1태그처럼 */
+            font-weight:bold;
+            font-size:25px;
+            padding:20px 0; /* 위 아래만 뜨게 하는 것 - padding 순서 상 우 하 좌*/
+            border-bottom:1px solid gray;
+            text-align:center;
+            text-decoration:underline;
+        }
+        #content ul li a{
+            text-decoration:none; /*밑줄없앰*/
+            color:blue;
+        }
+        #content ul li a:after{/* 링크선택자 */
+            content : ' - ' attr(href);
+        }
+        #content ul li.nate{/* class명이 nate인 요소의 디자인*/}
+        #content ul li:not(.nate) a{ /* li중에 class명이 nate를 제외한 요소들의 디자인(nate가 아닌것)*/
+            background-color:yellow;
+            /*a태그 글자에만 background를 써줄때*/
+        }
+        #footer ul {
+            overflow: hidden; /* block형 태그를 수평으로 놓고자 하는 부모단 */
+        }
+        #footer ul li {
+            float: left; /* block형 태그를 수평으로 */
+            list-style: none;
+            padding: 10px;
+            margin: 5px 10px;
+        }
+        #footer ul li:first-child {
+            padding-top: 20px;
+         }
+
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div id="header">
+        Weekly connect Website
+    </div>
+
+    <div id="content">
+        <ul>
+
+            <li><a href="http://www.google.com" target="_blank">구글</a></li>
+            <li><a href="http://www.naver.com" target="_blank">네이버</a></li>
+            <li><a href="http://www.daum.net" target="_blank">다음</a></li>
+            <li class="nate"><a href="http://www.nate.com" target="_blank">네이트</a></li>
+
+        </ul>
+    </div>
+
+    <div id="footer">
+        <ul>
+            <li><img src="0503/logo.png" alt="회사로고" /></li>
+            <li><img src="0503/add.png" alt="회사주소" /></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

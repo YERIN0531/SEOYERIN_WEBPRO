@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{margin:0; padding:0;} /*전체로 초기화 먼저 해주고 시작하기*/
+        /* ul{overflow:hidden; width:660px; margin:0 auto;}
+           ul li{float:left; list-style:none;
+              width:200px; height:100px; background-color:red; margin:10px;}*/
+        ul{width:700px; margin:0 auto;} /* inline으로 바꿨을땐 스페이스 공간이 생기기 때문에 더 길게 width 잡아주기 */
+        ul li{
+        display:inline-block;
+        list-style:none;
+        width:200px; height:100px; background-color:red; margin:10px;
+        }
+        ul li:nth-child(1){
+        opacity :1; /* 디폴트(완전불투명) */
+        }
+        ul li:nth-child(2){
+        opacity: 0.5; /*opacity 속성값은 0~1 0:완전투명, 1:완전불투명*/
+        }
+        ul li:nth-child(3){
+        opacity: 0.1;
+        }
+    </style>
+</head>
+<body>
+<ul> <!-- 수평하게 만드는 방법 : display inline / float left-->
+    <li>우리 나라 만세</li>
+    <li>대한 민국 만세</li>
+    <li>KOREA FIGHTING</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style> /* url()용도 : 백그라운드 이미지 가져올 때, font 가져올때 */
+        @font-face { /* 로컬폰트 설정 - 사용자 시스템에 해당 폰트가 없어도 우리가 직접 지정 가능*/
+            font-family: 'NanumBaeEunHye';
+            src: url('NanumBaeEunHyeCe.ttf'); /* 내 파일내에 없으면 폰트적용 안함 */
+        }
+        * {
+            font-family: 'NanumBaeEunHye'
+        }
+        #wrap {
+         width:600px; margin:10px auto;  height:300px; border:1px solid gray;
+        }
+            #wrap #content {
+                width: 80%;
+                height: 100%;
+                border: 1px solid red;
+                margin: 0 auto;
+                /* background-image: url('0504/sul.jpg'); 기본이 반복 하는 걸로 나옴 
+                background-repeat: no-repeat; repeat-x(x축만 repeat),repeat-y(y축만repeat)
+                background-position: left top; 기본타입(써주지 않아도 됨)*/
+                /* background-position: center; *or background-position: 100% 50% 이런식으로 써줘도 됨*/
+                background: url('0504/sul.jpg') center right no-repeat;
+                background-size: 100%;
+                font-size : 2em;
+                color:white;
+                text-align:center;
+                font-weight:bold;
+
+            }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div id="content">설현도 내일 쉴까요?</div>
+</div>
+</body>
+</html>

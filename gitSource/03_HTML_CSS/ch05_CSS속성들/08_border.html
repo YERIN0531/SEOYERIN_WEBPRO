@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+    div{width:100px; height:100px;}
+    div:nth-child(1){border:2px dotted red;}
+        div:nth-child(2) {
+            border-width: 2px;
+            /* border-style: solid; 이렇게 써도 되지만 아래처럼 써도 됨*/ 
+            border-left-style: solid;
+            border-right-style: dashed;
+            border-top-style: dotted;
+            border-bottom-style: double;
+            border-color:black;
+        }
+    </style>
+</head>
+<body>
+<div>1111</div>
+<div>2222</div>
+</body>
+</html>

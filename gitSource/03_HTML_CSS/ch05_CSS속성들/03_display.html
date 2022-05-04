@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    
+    <style>
+    /*inline 타입은 위, 아래 padding,margin이 사라지기 때문에 위,아래 여백을 주고 싶으면 block태그로 바꿔줘야됨*/
+     div{
+     width:100px;
+     height:100px;
+     border:1px solid black;
+     text-align:center;
+     font-weight:bold;
+     }
+     div:nth-child(1){
+     background-color:red;
+     display:block;
+     }
+     div:nth-child(2){
+     background-color:green; /* display속성은 div 태그 기본값을 가짐 */
+     }
+     div:nth-child(3){
+     background-color:blue;
+     display:inline;
+     margin:10px; /* block타입을 inline으로 바꾸면 위,아래마진이 사라짐 (왼쪽,오른쪽 여백만 남게됨)*/
+     }
+     div:nth-child(4){/* 인라인이기 때문에 한줄에 보이긴 하는데, block 형태로 나옴 따라서 height, 윗여백, 아래여백 지정가능*/
+     background-color:yellow;
+     display:inline;
+     }
+     div:nth-child(5){
+     background-color:black;
+     display:none; /*안보이게(공간도 안보임)*/
+     }
+     div:nth-child(6){
+     background-color:red;
+     display:inline-block; /* 인라인이기 때문에 한줄에 보이긴 하는데, block 형태로 나옴 따라서 height, 윗여백, 아래여백 지정가능*/
+     }
+     div:nth-child(7){
+     background-color:green;
+     display:inline-block;
+     }
+     div:nth-child(8){}
+    </style>
+</head>
+<body>
+    <div>content1</div>
+    <div>content2</div>
+    <div>content3</div>
+    <div>content4</div>
+    <div>content5</div>
+    <div>content6</div>
+    <div>content7</div>
+    <div>content8</div>
+</body>
+</html>
