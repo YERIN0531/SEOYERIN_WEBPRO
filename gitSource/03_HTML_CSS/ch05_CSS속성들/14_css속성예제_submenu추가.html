@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="14_예제StyleSheet2.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="contain">
+
+<div id="back"> <!-- width:100%, height:100% position : absolute left0top0; // 부모단에 relative z-index 로 뒤로 미뤄-->
+
+</div>
+
+<div id="header">
+    <p>HEADER</p>
+</div>
+
+<div id="nav">
+    <p>NAVIGATION</p>
+    <ul>
+        <li><a href="#">menu1</a>
+            <ul class="submenu"><!-- 얘는 display:none / 근데 본 메뉴는 float:left를 하지만 서브메뉴까지 수평으로 떠버림-->
+                                <!-- ul의 자손선택자만 float:left (본메뉴) -->
+                                <!-- ul>li:hover .submenu{display :block(메뉴1에 마우스를 hover하면 나타나는 것)}-->
+                <li><a href="#">submenu1-1</a></li> <!--display 해주면 됨 ,navigation -->
+                <li><a href="#">submenu1-2</a></li> <!--display 해주면 됨 ,navigation -->
+                <li><a href="#">submenu1-3</a></li> <!--display 해주면 됨 ,navigation -->
+                <li><a href="#">submenu1-4</a></li> <!--display 해주면 됨 ,navigation -->
+            </ul>
+        </li>
+        <li><a href="#">menu2</a>
+            <ul class="submenu">
+                <li><a href="#">submenu2-1</a></li> 
+                <li><a href="#">submenu2-2</a></li> 
+                <li><a href="#">submenu2-3</a></li> 
+                <li><a href="#">submenu2-4</a></li> 
+            </ul>
+        </li>
+        <li><a href="#">menu3</a>
+            <ul class="submenu">
+                <li><a href="#">submenu3-1</a></li>
+                <li><a href="#">submenu3-2</a></li>
+                <li><a href="#">submenu3-3</a></li>
+                <li><a href="#">submenu3-4</a></li>
+            </ul>
+        </li>
+        <li><a href="#">menu4</a>
+            <ul class="submenu">
+                <li><a href="#">submenu4-1</a></li>
+                <li><a href="#">submenu4-2</a></li>
+                <li><a href="#">submenu4-3</a></li>
+                <li><a href="#">submenu4-4</a></li>
+            </ul>
+        </li>
+        <li><a href="#">menu5</a>
+            <ul class="submenu">
+                <li><a href="#">submenu5-1</a></li>
+                <li><a href="#">submenu5-2</a></li>
+                <li><a href="#">submenu5-3</a></li>
+                <li><a href="#">submenu5-4</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div id="section">
+    <div id="content">
+    <p>CONTENT</p>
+    </div>
+    <div id="banner">
+    <p>BANNER</p>
+    </div>
+</div>
+
+<div id="footer">
+    <p>FOOTER</p>
+</div>
+</body>
+</html>
