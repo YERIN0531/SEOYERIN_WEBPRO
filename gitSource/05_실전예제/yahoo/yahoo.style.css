@@ -1,0 +1,114 @@
+﻿/* * * * * 전체 레이아웃 * * * * */
+*{margin: 0; padding :0;}
+div {
+    border: 1px solid white;
+}
+li{
+list-style:none;
+}
+a{
+text-decoration:none;
+}
+
+#contain{
+width:1000px;
+margin: 0 auto;
+}
+/* * * * * header _nav* * * * */
+#header{
+
+}
+#header #header_nav{
+background-color:#2d1152;
+height:25px;
+line-height:25px;
+overflow:hidden;
+min-width: 1000px;
+}
+
+#header #header_nav .gnb ul{
+}#header #header_nav .gnb ul li{
+float:left;
+padding:0 10px;
+}
+#header #header_nav .gnb ul li a{
+color:white;
+
+}
+
+#header #header_nav .survivalFootball{
+}
+#header #header_nav .survivalFootball p{
+float:right;
+color:white;
+margin-right:10px;
+}
+
+#header #header_nav .survivalFootball img{
+width:15px;
+height:15px;
+}
+
+/* * * * * header _info* * * * */
+#header #header_info{
+min-width:1000px;
+overflow:hidden;
+margin: 0 auto;
+border: 1px solid black;
+}
+#header_info .logo{
+    float:left;
+    margin: 10px 0;
+    padding-left:150px;
+}
+#header_info .search{
+    float: left;
+    margin: 20px 0; 
+}
+#header_info .search 
+/*
+#header_info .btn_search{
+float:left;
+}
+*/
+#header_info .service {
+float: right;
+}
+#header_info .service ul{
+overflow:hidden;
+}
+#header_info .service ul li{
+float:left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
