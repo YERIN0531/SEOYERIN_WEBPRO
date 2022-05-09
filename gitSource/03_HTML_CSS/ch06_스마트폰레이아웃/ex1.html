@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=yes
+          maximum-scale=3.0, minimum-scale=0.7"/>
+    <title></title>
+    <style>
+    *{margin:0px; padding:0px;}
+    li{list-style:none;}
+    a{text-decoration:none;}
+    /*****header****/
+    header{
+    height:45px;
+    line-height:45px;
+    text-align:center;
+    background:url('imgEx1/bg_header.png');
+    position:relative;
+    }
+    header .left{
+    position:absolute;
+    left:5px;
+    top:5px;
+    }
+    header .right{
+    position:absolute;
+    right:5px;
+    top:5px;
+    }
+    header h1{
+    color:white;
+    }
+    /******gnb*/
+    #gnb{
+    display:none;
+    }
+    #gnb ul{
+    overflow:hidden;
+    border:5px solid gray;
+    }
+    #gnb ul li{/*li 메뉴가 8개가 있어서 li하나당 12.5% 사용가능*/
+    float:left;
+    border:1px solid lightgray;
+    width:10%;
+    margin:1.25%;
+    text-align:center;
+    box-sizing:border-box;
+    }
+    #gnb ul li a{
+    color:blue;
+    }
+
+    /*#toggle:checked ~gnb{display:block;}*/
+    input[type='checkbox']:checked ~#gnb{display:block;}
+    #toggle{display:none;}
+
+    /******lnb******/
+    #lnb ul{
+    overflow:hidden;
+    }
+    #lnb ul li{/*li메뉴가 5개가 있어서 li하나당 20%사용 가능*/
+    float:left;
+    background-color:#137163;
+    width:20%;
+    text-align:center;
+    border:1px solid white;
+    box-sizing:border-box; /* border를 width안으로 */
+    height:60px;
+    line-height:60px;
+    font-weight:bold;
+    }
+    #lnb ul li a{
+    color:white;
+    }
+    #lnb ul li:first-child{
+    border-left:0px;
+    }
+    #lnb ul li:last-child{
+    border-right:0px;
+    }
+
+    /****content_header*****/
+    #content{padding:10px; color:#333333;}
+    #content .content_header{
+    padding:10px;
+    border-bottom:1px solid lightgray;
+    }
+    /****content_body*****/
+        #content .content_body p:first-child{
+        color:deepskyblue;
+        font-weight:bold;
+        padding:10px;
+        /*말줄임(ellipsis) 태그 - 외우는 사람 없고 다복붙함*/
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis; 
+        }
+        #content .content_body p:last-child {
+            background: url('imgEx1/bg_image.png') -500px -200px;
+            padding:10px;
+            font-weight:bold;
+            color:black;
+        }
+    /****footer*****/
+    /****footer logo*****/
+    footer .logo{
+    text-align:center;
+    border-top:1px solid lightgray;
+    border-bottom:1px solid lightgray;
+    }
+    footer .logo img{width:150px;}
+
+    /****footer info*****/
+    footer .info, footer .address{
+    text-align:center; /*글씨나 이미지를 가운데로*/
+        }
+    
+    footer .info{
+    font-weight:bold;
+    color:darkolivegreen;
+    font-size:1.5em;
+    }
+    footer .address{
+    font-size:0.8em;
+    font-weight:bold;
+    }
+    /****footer address*****/
+    </style>
+</head>                                                                                                                                     
+<body>
+    <input type="checkbox" id="toggle"/>
+<header>
+    <a href="#" class="left">
+        <img src="imgEx1/category.png" />
+    </a>
+    <h1>Mobile</h1>
+    <label for="toggle" class="right">
+        <img src="imgEx1/menu.png" />
+    </label>
+</header>
+    <div id="gnb">
+        <ul>
+            <li><a href="#">gnb1</a></li>
+            <li><a href="#">gnb2</a></li>
+            <li><a href="#">gnb3</a></li>
+            <li><a href="#">gnb4</a></li>
+            <li><a href="#">gnb5</a></li>
+            <li><a href="#">gnb6</a></li>
+            <li><a href="#">gnb7</a></li>
+            <li><a href="#">gnb8</a></li>
+        </ul>
+    </div>
+    <div id="lnb">
+        <ul>
+            <li><a href="#">lnb1</a></li>
+            <li><a href="#">lnb2</a></li>
+            <li><a href="#">lnb3</a></li>
+            <li><a href="#">lnb4</a></li>
+            <li><a href="#">lnb5</a></li>
+        </ul>
+    </div>
+
+<div id="content">
+    <div class="content_header">
+        <h1>홍길동</h1>
+    </div>
+    <div class="content_body">
+        <p>첫번째 p태그는 한줄로 출력하는데 내용이 길면 말줄임(...)</p>
+        <p>
+            있으며, 밥을 굳세게 붙잡아 있으랴? 이것이야말로 충분히 평화스러운 소리다.이것은 별과 이상은 뜨거운지라, 것이다. 인간의 위하여 무엇이 구할 보이는 보배를 이것이다. 그들의 얼음이 바로 옷을 인생에 듣는다. 생생하며, 곳으로 내려온 있는 청춘의 인생에 사막이다. 실현에 피에 위하여서, 유소년에게서 끓는 시들어 이상 심장은 교향악이다. 찬미를 피고, 있으며, 같은 인류의 커다란 기쁘며, 있는 봄날의 아니다. 꾸며 눈이 않는 살 오직 능히 것은 무엇을 못할 것이다. 영락과 주며, 위하여 공자는 인간에 아름다우냐?
+
+            인간의 모래뿐일 이것은 것이다. 보배를 밥을 보이는 현저하게 고동을 남는 피부가 얼마나 같이, 때문이다. 커다란 인간은 인생을 설레는 인간에 용감하고 그들의 때문이다. 심장의 속에 그들의 얼마나 우리 끓는 뼈 있는 위하여 이것이다. 예가 놀이 얼마나 품에 커다란 꽃이 피가 고동을 때문이다. 바이며, 품고 풀밭에 못할 날카로우나 것은 우리는 이상, 것이다. 때에, 것은 그들은 청춘에서만 능히 사막이다. 구할 곳으로 트고, 우리 있는 꽃 설산에서 피가 운다. 아니더면, 같은 생의 그들은 봄바람이다. 소금이라 웅대한 창공에 장식하는 운다. 두손을 그림자는 만천하의 실로 장식하는 사막이다.
+        </p>
+    </div>
+</div>
+
+<footer>
+    <div class="logo">
+        <img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png"/>
+    </div>
+    <div class="info">
+        <p>XX주식회사</p>
+    </div>
+    <div class="address">
+        <p>서울시 XX구 XX동 00-0 XX빌딩 803호</p>
+    </div>
+</footer>
+</body>
+</html>

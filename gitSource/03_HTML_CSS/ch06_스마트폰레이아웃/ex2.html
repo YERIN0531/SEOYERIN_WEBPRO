@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=yes
+          maximum-scale=2.0, minimum-scale=0.7"/>
+    <title></title>
+    <!--인터넷 폰트 link-->
+    <style>
+    /***************페이지초기화***************/
+    *{
+    padding:0;
+    margin:0;
+    font-family:'Gill Sans', 'Gill Sans MT'
+    }
+    li{list-style:none;}
+    a{text-decoration:none;}
+    /***************header***************/
+    header{
+    height:100px;
+    background-color:orange;
+    width:100%;
+    }
+    /***************header #logo_wrap***************/
+    header #logo_wrap{
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    position:relative;
+    }
+    header #logo_wrap img.menu{
+    position:absolute;
+    left:10px;
+    top:0px;
+    }
+    header #logo_wrap a{}
+    header #logo_wrap a.logo{
+    color:white;    
+    }
+    header #logo_wrap img.myinfo{
+    position:absolute;
+    top:0;
+    right:10px;
+    }
+    /***************header #search***************/
+    #search{
+    }
+    input[type='text']{
+    position:relative;
+    width:100%;
+    border:0;
+    }
+    input[type='submit']{
+    background:url('imgEx2/search.png')no-repeat;
+    width:20px;
+    position:absolute;
+    right:50px;
+    padding:60px;
+    }
+    </style>
+</head>
+<body>
+<header>
+    <div id="logo_wrap">
+        <img src="imgEx2/menu.png" class="menu" alt="메뉴 아이콘"/>
+        <a href="ex2.html" class="logo"><h3>mobile logo</h3></a>
+        <img src="imgEx2/myinfo.png" class="myinfo" alt="인포 아이콘"/>
+    </div>
+    <div id="search">
+        <form action="#">
+            <input type="text" name="query_word" />
+            <input type="submit" value=""/>
+        </form>
+    </div>
+</header>
+
+<section></section>
+<footer></footer>
+</body>
+</html>

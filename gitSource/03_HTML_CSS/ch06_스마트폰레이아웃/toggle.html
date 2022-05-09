@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+    div{
+    width:300px;
+    height:100px;
+    background-color:red;
+    color:white;
+    display:none;
+    }
+    input[type='checkbox']:checked ~div{display:block;}
+    #m {display:none;}
+    </style>
+</head>
+<body>
+    <label for="name">이름</label>
+    <input type="text" name="name" id="name" /><br />
+    <input type="checkbox" name="gender" id="m" />
+    <input type="checkbox" name="gender" id="f" /><label for="f">여자</label><br /><br />
+    <label for="m"><img src="imgEx1/menu.png" /></label>
+    <br />
+    <br />
+    <br />
+    <div id="1">토글에 의해 나타났다 사라졌다 할 부분</div>
+
+
+
+
+    <details>
+        <summary><input type="button" name="menu" />
+        <label for="menu"><img src="imgEx1/menu.png" /></label></summary>
+        <div>토글에 의해 나타나는 부분</div>
+    </details>
+
+</body>
+</html>
