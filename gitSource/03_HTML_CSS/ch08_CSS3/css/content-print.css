@@ -1,0 +1,7 @@
+﻿/*프린트용 css/content-print.css*/
+/*print용 .content*/ 
+#wrap .content{
+    color: darkgreen;
+    margin: 10px 0;
+    padding:10px;
+ }

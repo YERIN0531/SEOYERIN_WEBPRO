@@ -19,7 +19,7 @@
     /***************header***************/
     header{
     height:100px;
-    background-color:orange;
+    background-color:#ea8f00;
     width:100%;
     }
     /***************header #logo_wrap***************/
@@ -37,6 +37,7 @@
     header #logo_wrap a{}
     header #logo_wrap a.logo{
     color:white;    
+    font-size:1.1em;
     }
     header #logo_wrap img.myinfo{
     position:absolute;
@@ -45,18 +46,154 @@
     }
     /***************header #search***************/
     #search{
+    height:50px;
+    position:relative; /*돋보기 이미지를 #search안에*/
     }
-    input[type='text']{
-    position:relative;
+    header #search input[type='text']{
     width:100%;
-    border:0;
+    height:50px;
+    border:3px solid #ea8f00;
+    box-sizing:border-box;
+    padding: 5px 55px 5px 5px; /*돋보기 올려야 하니까 돋보기 앞까지만 나오게 패딩을 주는 것*/
+    font-size:1.3em;
+    font-weight:bold;
+    outline:0; /*focus할때 생기는 ouline을 없애는 것*/
     }
-    input[type='submit']{
+    input[type='submit']{  
+    width:50px;
+    height:50px;
     background:url('imgEx2/search.png')no-repeat;
-    width:20px;
+    border:0;
+    outline:0;
     position:absolute;
-    right:50px;
-    padding:60px;
+    top:0;
+    right:0px;
+    cursor:pointer;
+    }
+
+    /**********#Inb************/
+    #lnb{}
+    #lnb ul{
+    overflow:hidden;
+    margin:5px 0;
+    width:100%;
+    }
+    #lnb ul li{
+    float:left;
+    border-right:2px solid #ea8f00;
+    width:16.5%;
+    text-align:center;
+    box-sizing:border-box;
+
+    }
+    #lnb ul li a{
+    color:dodgerblue;
+    font-weight:bold;
+    font-size:1.3em;
+    }
+    #lnb ul li:last-child{
+    border-right:none;
+    }
+    /**********#section1************/
+    #section1 .row1,#section1 .row2, #section1 .row3{
+    overflow:hidden;
+    }
+    .row1 div, .row2 div, .row3 div{
+    float:left;
+    width:50%;
+    height:135px;
+    border:2px solid white;
+    box-sizing:border-box;
+    }
+    .row1 div img,.row2 div img,.row3 div img{
+    width:100%;
+    height:100%;
+    }
+    /**********#section2************/
+    #section2{
+    margin: 5px;
+    }
+    #section2 ul li{
+    border:1px solid lightgray;
+    padding: 8px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    }
+    #section2 ul li a{
+    color:black;
+    }
+    /**********#section3************/
+        /* 내가 짠거
+    #section3 ul{
+    }
+    #section3 ul li{
+    border: 1px solid lightgray;
+    margin: 5px;
+    padding:5px;
+    overflow:hidden;
+    
+    }
+    #section3 ul li p.img{
+    float:left;
+    margin:10px;
+    }
+    #section3 ul li p.text{
+    width:70%;
+    float:left;
+    margin-top:10px;
+    }
+    #section3 ul li p.text span:first-child{
+    display:block;
+    font-size:1.3em;
+    color:darkblue;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    }
+    #section3 ul li p.text span:last-child{
+    font-size:0.9em;
+    color:gray;
+    }*/
+    #section3 ul li{
+    border:1px solid lightgray;
+    margin:5px; padding:5px;
+    height:120px;
+    position:relative;
+    }
+    #section3 ul li p.img{
+        position:absolute;
+        top:15px;
+        left:15px;
+    }
+    #section3 ul li p.text{
+        width:100%-100px;
+        padding:5px 5px 5px 120px;
+    }
+    #section3 ul li p.text span:first-child{
+        display:block;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        font-size:1.2em;
+        color:darkblue;
+        font-weight:bold;
+    }
+    #section3 ul li p.text span:last-child{}
+    /**********#footer************/
+    footer{
+    width:100%;
+    height:100px;
+    background-color:#ea8f00;
+    }
+    footer p:first-child{
+    text-align:center;
+    }
+    footer p:last-child{
+    text-align:center;
+    font-weight:bold;
+    font-size:0.8em;
+    padding-bottom:5px;
     }
     </style>
 </head>
@@ -75,7 +212,103 @@
     </div>
 </header>
 
-<section></section>
-<footer></footer>
+<div id="lnb">
+    <ul>
+        <li><a href="#">lnb1</a></li>
+        <li><a href="#">lnb2</a></li>
+        <li><a href="#">lnb3</a></li>
+        <li><a href="#">lnb4</a></li>
+        <li><a href="#">lnb5</a></li>
+        <li><a href="#">lnb6</a></li>
+    </ul>
+</div>
+<section>
+    <div id="section1">
+        <div class="row1">
+            <div>
+             <a href="https://n.news.naver.com/mnews/article/009/0004961256?sid=105">
+                <img src="https://imgnews.pstatic.net/image/009/2022/05/09/0004961256_001_20220509163702179.jpg?type=w647" alt="1행1열기사" />
+             </a>
+            </div>
+            <div>
+             <a href="https://n.news.naver.com/mnews/article/014/0004832959?sid=105">
+                <img src="https://imgnews.pstatic.net/image/014/2022/05/09/0004832959_001_20220509132903707.jpg?type=w647" alt="1행2열기사" />
+             </a>
+            </div>
+        </div>
+        <div class="row2">
+            <div>
+            <a href="https://n.news.naver.com/mnews/article/092/0002256221?sid=105">
+                <img src="https://imgnews.pstatic.net/image/092/2022/05/10/0002256221_001_20220510083901230.jpg?type=w647" alt="2행1열기사" />
+             </a>
+            </div>
+            <div>
+            <a href="https://n.news.naver.com/mnews/article/014/0004833251?sid=105">
+                <img src="https://imgnews.pstatic.net/image/014/2022/05/09/0004833251_001_20220509193003815.jpg?type=w647" alt="2행2열기사" />
+             </a>
+            </div>
+        </div>
+        <div class="row3">
+            <div>
+            <a href="https://n.news.naver.com/mnews/article/011/0004051650?sid=105">
+                <img src="https://imgnews.pstatic.net/image/011/2022/05/09/0004051650_001_20220509221703769.png?type=w647" alt="3행1열기사" />
+             </a>
+            </div>
+            <div>
+            <a href="https://n.news.naver.com/mnews/article/584/0000018897?sid=105">
+                <img src="https://imgnews.pstatic.net/image/584/2022/05/09/0000018897_001_20220509174102432.jpg?type=w647" alt="3행2열기사" />
+             </a>
+            </div>
+        </div>
+    </div><!--#sectoin1 : 3행 2열 기사 이미지와 alink-->
+
+    <div id="section2">
+        <ul>
+            <li>
+                <a href="https://n.news.naver.com/mnews/article/081/0003271622?sid=105">
+                “같이 산책해요” “고기 뜯으실 분” 거리두기 해제에 날개 다는 ‘오프라인’ 플랫폼</a>
+            </li>
+            <li>
+                <a href="https://n.news.naver.com/mnews/article/018/0005211170?sid=105">
+                반토막 난 비트코인…"추가 하락 올 수도"</a>
+            </li>
+            <li>
+                <a href="https://n.news.naver.com/mnews/article/092/0002256209?sid=105">
+                사람들은 왜 아플 때도 일 멈추지 못할까</a>
+            </li>
+            <li>
+                <a href="https://n.news.naver.com/mnews/article/366/0000812189?sid=105">
+                “어려운 학생과 불치병 환자 도와 달라” …KAIST에 300억 쾌척한 익명의 50대 기부자</a>
+            </li>
+        </ul>
+    </div><!--#section2 : 기사 해드라인 list와 alink(길면 말줄임, 짧으면 그냥)-->
+    <div id="section3">
+        <ul>
+            <li>
+                <p class="img">
+                   <img src="https://via.placeholder.com/100X100"/>
+                </p>
+                <p class="text">
+                    <span>첫번째 sapn부분은 말줄임 할 예정입니다. 길면 말줄임태그 하고 짧으면 안보이게 쓰는 효과를 넣을 것입니다.</span>    
+                    <span>두번째 span부분은 다 나오게 할 예정입니다. 그래서 2줄 이상이 되기도 하죠</span>    
+                </p>
+            </li>
+            <li>
+                <p class="img">
+                    <img src="https://via.placeholder.com/100X100" />
+                </p>
+                <p class="text">
+                    <span>첫번째 span부분은 말줄임 할 예정입니다.</span>
+                    <span>두번째 span부분은 다 나오게 할 예정입니다. 그래서 2줄 이상이 되기도 하죠</span>
+                </p>
+            </li>
+
+        </ul>
+    </div><!--#section3 : 100X100 이미지와 가변길이 -->
+</section>
+<footer>
+    <p><img src="imgEx2/logo.png" /></p>
+    <p>서울시 강남구 역삼동 좋은빌딩 402호</p>
+</footer>
 </body>
 </html>

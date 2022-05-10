@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0"/>
+    <title></title>
+    <style>
+    /*페이지 초기화*/
+    *{margin:0; padding:0;}
+    li{
+    list-style:none;
+    }
+    a{
+    text-decoration:none;
+    color:black;
+    display:block;
+    }
+    /*wrap*/
+
+    
+
+    /*nav*/
+    
+    
+    /*스마트폰 화면*/
+    @media screen and (max-width:1000px){/*스마트폰 화면(1000 이하):메뉴3개(1,3,5)*/
+    #wrap{
+    background-color:pink;
+    margin: 3px;
+    }
+    #wrap #nav ul li:nth-child(2){display:none;}
+    #wrap #nav ul li:nth-child(4){display:none;}
+    #wrap #nav ul li{
+    width:33.3333%;
+    }
+    #wrap #footer{
+    background-color:lightpink;
+    }
+    }
+    /*정임씨 테플릿 화면(2400px이상):메뉴4개*/
+    @media screen and (min-width:2001px){
+    #wrap{
+    background-color:aqua;
+    margin:3px;
+    }
+    #wrap #nav ul li:nth-child(4){display:none;}
+    #wrap #nav ul li{
+     width:25%;
+    }
+    #wrap #footer {
+    background-color:lightgray;
+    }
+    }
+    /*pc 화면:메뉴5개*/
+    @media screen and (min-width:1001px) and (max-width:2000px){/*pc화면(1001~2000px)*/
+     #wrap{
+     width:800px;
+     margin:3px auto;
+     }
+     #wrap #nav ul li{
+     width:20%;
+     }
+    }
+
+    /*공통부분*/
+    #wrap{
+    border:1px solid gray;
+    }
+    /*header*/
+    #header h3{
+    height:100px;
+    line-height:100px;
+    text-align:center;
+    }
+    /*nav*/
+    #wrap #nav ul{
+    overflow:hidden;
+    }
+    #wrap #nav ul li{
+    float:left;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    border:1px solid lightgray;
+    box-sizing:border-box;
+    }
+    #nav ul li a{
+    color:black;
+    font-weight:bold;
+    }
+    /*content*/
+    #content{
+    padding:10px;
+    }
+     #content p:first-child{
+     text-align:center;
+     color:green;
+     font-size:1.6em;
+     font-weight:bold;
+     padding:10px 0 0 0;
+
+     }
+     #content p:last-child{
+     font-weight:bold;
+     }
+     #wrap #footer{
+     height:100px; line-height:100px; text-align:center;
+     font-size:1.2em;
+     }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h3>웹표준 반응형</h3>
+        </div>
+        <div id="nav">
+            <ul>
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+                <li><a href="#">menu5</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <p>
+                Why do we use it?
+            </p>
+            <p>
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+            </p>
+        </div>
+        <div id="footer">
+            <p>홍길동 주식회사</p>
+        </div>
+    </div>
+</body>
+</html>

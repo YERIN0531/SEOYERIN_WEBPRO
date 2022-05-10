@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width" />
+    <title></title>
+    <style>
+        *{margin:0; padding:0;}
+        li{list-style:none;}
+        a{text-decoration:none;}
+        /******top_bar : 고정바******/
+        #top_bar{
+        height:70px;
+        line-height:70px;
+        background-color:#ffd800;
+        font-size:1.5em;
+        text-align:center;
+        position:fixed;
+        top:0; left:0; right:0;
+        }
+        #top_bar ul{
+        overflow:hidden;
+        }
+        #top_bar ul li{
+        float:left;
+        width:15%;
+        border-right:1px dotted blue;
+        }
+        #top_bar ul li a{
+        color:white;
+        font-weight:bold;
+        }
+        /**********left_bar*/
+        #left_bar{
+        width:310px;
+        font-size:1.5em;
+        background-color:#6b621e;
+        position:fixed;
+        top:70px; left:0; bottom:80px;
+        }
+        #left_bar ul{
+        }
+        #left_bar ul li{
+        border-bottom: 1px solid gray;
+        }
+        #left_bar ul li a{
+        display:block;
+        color:white;
+         /*line-height:200%;*/
+         padding: 10px 20px;
+        }
+
+        #right_bar{
+        width:300px;
+        text-align:center;
+        background-color:lightyellow;
+        position:fixed;
+        top:70px; right:0; bottom:80px;
+        }
+        #right_bar ul{
+        height:100%; /*이거 right_bar에다가 놓으면 안됨. body껄 다 쓸게 아니니까*/
+        }
+        #right_bar ul li{
+        height:33%;
+        padding:2%
+        }
+        #right_bar ul li a img{
+        width:100%;
+        height:100%;
+        text-align:center;
+        }
+       #bottom_bar{
+        height:80px;
+        text-align:center;
+        line-height:80px;
+        background-color:lightyellow;
+        bottom:0; right:0; left:0;
+        position:fixed;
+        }
+        #bottom_bar p{
+        font-weight:bold;
+        }
+        /******wrap******/
+        #wrap{
+            margin:70px 300px 80px 310px;
+            padding:10px;
+        }
+        #wrap img{float:left; margin:0 15px 10px 0;}
+    </style>
+</head>
+<body>
+<!--항상 밑에 footer 깔리고, 가운데만 움직이고 나머지는 고정-->
+<div id="top_bar">
+    <ul>
+        <li><a href="#">GNB_1</a></li>
+        <li><a href="#">GNB_2</a></li>
+        <li><a href="#">GNB_3</a></li>
+        <li><a href="#">GNB_4</a></li>
+        <li><a href="#">GNB_5</a></li>
+        <li><a href="#">GNB_6</a></li>
+    </ul>
+</div>
+<div id="left_bar">
+    <ul>
+        <li><a href="lnb1">LNB_01</a></li>
+        <li><a href="lnb2">LNB_02</a></li>
+        <li><a href="lnb3">LNB_03</a></li>
+        <li><a href="lnb4">LNB_04</a></li>
+        <li><a href="lnb5">LNB_05</a></li>
+        <li><a href="lnb6">LNB_06</a></li>
+        <li><a href="lnb7">LNB_07</a></li>
+        <li><a href="lnb8">LNB_08</a></li>
+        <li><a href="lnb9">LNB_09</a></li>
+        <li><a href="lnb10">LNB_10</a></li>
+    </ul>
+</div>
+<div id="right_bar">
+    <ul>
+        <li>
+            <a href="http://www.daum.net" target="_blank">
+                <img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png" alt="다음로고" />
+            </a>
+        </li>
+        <li>
+            <a href="http://www.google.com" target="_blank">
+                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="다음로고" />
+            </a>
+        </li>
+        <li>
+            <a href="http://www.daum.net" target="_blank">
+                <img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png" alt="다음로고" />
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="bottom_bar">
+    <p>Copyright ⓒ joeun system Co. All rights reserved. 101 abc 123-ro Molra-Gu, Seoul, Korea</p>
+</div>
+<div id="wrap">
+    <img src="https://via.placeholder.com/100x100" />
+    <p>
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+    </p>
+</div>
+</body>
+</html>
