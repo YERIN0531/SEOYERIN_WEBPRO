@@ -1,0 +1,140 @@
+﻿/****전체 레이아웃***/
+*{
+padding:0;
+margin:0;
+}
+li{
+list-style:none;
+}
+a{
+text-decoration:none;
+color:black;
+}
+
+#wrap{
+width:1200px;
+margin:0 auto;
+}
+
+/******header*******/
+#header{
+border-bottom:1px solid gray;
+width:1000px;
+margin:0 auto;
+height:100px;
+}
+#header .gnb{
+overflow:hidden;
+height:50px;
+line-height:50px;
+margin:4px auto;
+}
+#header .gnb .logo{
+float:left;
+}
+#header .gnb .logo p{
+margin-top:10px;
+border: 1px solid lightgray;
+background-color:#FDEADA;
+width:120px;
+height:25px;
+line-height:25px;
+text-align:center;
+padding:1px;
+font-weight:bold;
+}
+
+#header .gnb .header_menu{
+float:left;
+}
+#header .gnb .header_menu ul{}
+#header .gnb .header_menu ul li{
+float:left;
+margin:0 30px;
+}
+#header .gnb .header_menu ul li a{}
+
+#header .gnb .login{
+float:right;
+}
+#header .gnb .login ul{}
+#header .gnb .login ul li{
+float:left;
+margin: 0 40px;
+}
+#header .gnb .login ul li a{}
+
+#header .page_name{
+margin-top:20px;
+}
+#header .page_name p{}
+
+/******content*******/
+#content{
+margin:20px;
+overflow:hidden;
+}
+#content .main_menu{
+width:200px;
+float:left;
+margin:0 40px 0 100px;
+}
+#content .main_menu ul{}
+#content .main_menu ul li{
+border:1px solid lightgray;
+padding:15px;
+}
+#content .main_menu ul li:first-child{
+padding-left:5px;
+}
+#content .main_menu ul li:nth-child(5){
+background-color:#FDEADA;
+font-weight:bold;
+}
+
+
+#content .section1{
+border:1px solid lightgray;
+width:700px;
+height:500px;
+float:left;
+}
+#content .section1 .content_name{
+border-bottom:1px solid lightgray;
+padding:10px;
+font-weight:bold;
+}
+#content .section1 .content_name p{}
+
+#content .section2{
+height:400px;
+margin:20px 0 0 110px;
+}
+.section2 td{
+padding:15px 30px 0 15px;
+font-size:1.2em;
+}
+input[type='text'], input[type='email'], input[type='tel']{
+border:1px solid lightgray;
+outline:0;
+width:300px;
+height:25px;
+}
+.section2 p{
+margin:80px auto;
+text-align:center;
+}
+input[type=submit]{
+font-size:1.2em;
+padding:0 10px;
+}
+/******footer*******/
+#footer{
+margin:20px auto;
+border:1px solid lightgray;
+width:1000px;
+height:35px;
+line-height:35px;
+text-align:center;
+background-color:#FDEADA;
+}

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+    //type은 number인데 숫자로 표현되지 않는 아이들 
+        // NaN(타입은 number로 나옴)
+        i = Number("a");
+        document.write('i=' + i + ' - i가 NaN인지 : ' + isNaN(i) + '<br>');
+
+        // Infinity (타입은 number로 나옴) - 무한대
+        // 자바는 10/0 을 하면 안나옴 
+        // 자바스크립트는 ?
+        i = 10 / 0; //10.00000000000000000000000000000000000000000000000000000000000000000000001
+        document.write('i=' + i + ' - i가 유한수인지 : ' + isFinite(i));
+
+        //자바에서는
+        i = 'hello' + 10; // 문자랑 숫자 or 숫자랑 문자랑 하면 문자가 됨 
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+       <script>
+           scoreStr = prompt('점수를 입력하세요', '0~100점 사이');
+           if (scoreStr == null) { //빈스트링이라는 뜻이 아니라 취소를 눌렀다는 뜻 
+               alert('점수를 입력하세요');
+           } else {
+               // document.write(scoreStr + '의 타입은' + typeof (scoreStr)); - prompt는 무조건 string 타입으로 받음
+               score = Number(scoreStr); //자바로 치면 Integer.parseInt("빈스트링 넣으면 자바는 오류남"); Number("");는 0으로 나옴
+               //document.write(score + '의 타입은' + typeof(score)); // 값에 a를 넣으면 NaN나옴 
+               if (isNaN(score)) { //score가 NaN이냐? score가 NaN이면 true 리턴, 아니면 false리턴 
+                   alert('점수를 입력하세요');
+               } else {
+                   result = score > 70 ? "잘했다" : "못했다";
+               }
+               document.write(result);
+           }
+       </script>
+</head>
+<body>
+
+</body>
+</html>

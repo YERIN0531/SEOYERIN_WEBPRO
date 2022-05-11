@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        //자료형 : string, number, boolean(true/false), object(객채생성)(array), function, undefined(정의하지 않은것)
+        var varString; //변수 선언 
+        //int i; sysout(i); 이렇게 하면 자바에서는 쓸 수가 없음 . i 타입은 int라는건알아 
+        document.write('1. varString 타입 : ' + typeof (varString) + '-값:' + varString +'<br>');
+        varString = '"홍길동"';
+        document.write('2. varString 타입: ' + typeof (varString) + '-값:' + varString + '<br>');
+        varString = 10.5;
+        document.write('3. varString 타입: ' + typeof (varString) + '-값:' + varString + '<br>');
+        varString = true; //boolean값- true/false;
+        document.write('4. varString 타입: ' + typeof (varString) + '-값:' + varString + '<br>');
+        varString = { 'name': '홍길동', age: 20, score: 3.5 }; //javascript의 객체 방출 방식은 json과 똑같음 (데이터 받을때 참고하기)
+        document.write('5. varString 타입: ' + typeof (varString) + '-값:' + varString + '<br>');
+        varString = ['hello', 10, 10.5, false, { 'id': 'aaaa', 'pw': '1111' }, [1, 2, 3]]; //문자,정수,실수,boolean,객체,배열,function 다 넣을 수 있음 
+        document.write('6. varString 타입: ' + typeof (varString) + '-값:' + varString + '<br>');
+        varString = function () {
+            alert('함수속');
+        };
+        document.write('7. varString 타입: ' + typeof (varString) + '-값:' + varString + '<br>');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

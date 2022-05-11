@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // str에 100들어가 있을때
+        str = '100';
+        i = Number(str);
+        document.write('<h3>i = Number("100")</h3>');
+        document.write('i의 타입은' + typeof (i) + ' - 값 : ' + i + '<br>');
+
+        i = parseInt(str);
+        document.write('<h3>i = Number("100")</h3>');
+        document.write('i의 타입은' + typeof (i) + ' - 값 : ' + i + '<br>');
+        document.write('<hr>');
+
+        // str에 100점(숫자+글자)들어가 있을때
+        str = '100점';
+        i = Number(str); // i에 NaN
+        document.write('<h3>i = Number("100점")</h3>');
+        document.write('i의 타입은' + typeof (i) + ' - 값 : ' + i + '<br>');
+
+        i = parseInt(str); // i에 100
+        document.write('<h3>i = Number("100점")</h3>');
+        document.write('i의 타입은' + typeof (i) + ' - 값 : ' + i + '<br>');
+        document.write('<hr>');
+
+        // str에 16진수 들어가 있을때
+        str = 'FF';
+        i = Number(str); // i에 NaN
+        document.write('<h3>i = Number("FF")</h3>');
+        document.write('i의 타입은' + typeof (i) + ' - 값 : ' + i + '<br>');
+
+        i = parseInt(str, 16); // i에 100
+        document.write('<h3>i = Number("FF")</h3>');
+        document.write('i의 타입은' + typeof (i) + ' - 값 : ' + i + '<br>');
+        document.write('<hr>');
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
