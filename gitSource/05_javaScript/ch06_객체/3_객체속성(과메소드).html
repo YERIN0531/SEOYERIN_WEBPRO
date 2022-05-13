@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        //this.age = 내 객체가 가지고 있는 age 
+        //this.name = 내 객체의 name
+        var person = {
+            name: '홍길동',
+            age: 20,
+            eat: function (food) {
+                var msg = this.age + '살 ' + this.name + '님은 ' + food + '를 먹습니다';
+                document.write(msg);
+                alert(msg);
+            }
+        };
+        person.eat('덮밥'); // person.eat를 호출한 것 
+        document.write(person); // 그냥 이렇게 하면 person이 객체기 때문에 출력이 안됨. tostring을 추가하면 됨
+    </script>
+</head>
+<body>
+
+</body>
+</html>

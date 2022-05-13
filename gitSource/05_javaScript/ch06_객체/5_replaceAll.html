@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        replaceAll("안녕\n방가\n좋은주말", "\n", "<br>");
+        function replaceAll(str, oldStr, replaceStr) {
+            //document.write(str + "<br>");
+            var splitStr = str.split(oldStr);
+            //document.write(splitStr + "<br>");
+            var result = splitStr.join(replaceStr);
+            //document.write(result);
+            return result;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

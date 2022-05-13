@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function test(name) {
+            var msg = 'Hello, ' + name + '님 방가방가';
+            //클로저함수 : return 된 함수 
+            return function () {
+                alert(msg);
+            };
+        }
+        test('홍길동')(); //리턴받은 클로저 함수를 바로 실행
+    </script>
+</head>
+<body>
+
+</body>
+</html>

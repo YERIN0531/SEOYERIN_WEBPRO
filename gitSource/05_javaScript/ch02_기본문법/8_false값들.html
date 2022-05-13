@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+    //0, '', NaN, null undefined
+        var i;
+        document.write("i값은" + i + "불린형으로는 " + Boolean(i) + "<br>");
+        i = 0;
+        document.write("i값은" + i + "불린형으로는 " + Boolean(i) + "<br>");
+        i = NaN; //NaN으로 써도 되지만 i = Number("a");라고 써도 됨
+        document.write("i값은" + i + "불린형으로는 " + Boolean(i) + "<br>");
+        i = "";
+        document.write("i값은" + i + "불린형으로는 " + Boolean(i) + "<br>");
+        i = null;
+        document.write("i값은" + i + "불린형으로는 " + Boolean(i) + "<br>");
+        document.write("<hr>")
+        document.write(("" == false) + " : ==연산자는 양 변의 값이 일치할 경우 true<br>");
+        // null은 여기서 안먹힘 
+        document.write(("" === false) + " : ===연산자는 양 변의 값과 자료형이 일치할 경우 true<br>");
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

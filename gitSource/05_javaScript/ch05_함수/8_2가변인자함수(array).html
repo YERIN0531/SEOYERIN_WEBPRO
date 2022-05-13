@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var arr1 = [273, 2, 3, 'Hello',];  
+        var arr2 = array(273, 2, 3, 'Hello'); 
+        var arr3 = [, , ,];
+        var arr4 = array(3);
+        var arr5 = []; //방의 갯수가 0인 배열
+        var arr6 = array(); //매개변수가 0개일 경우 : 방의 갯수가 0인 배열
+
+        document.write('arr1 = ' + arr1 + ': 방의 개수 = ' + arr1.length + '<br>');
+        document.write('arr2 = ' + arr2 + ': 방의 개수 = ' + arr2.length + '<br>');
+        document.write('arr3 = ' + arr3 + ': 방의 개수 = ' + arr3.length + '<br>');
+        document.write('arr4 = ' + arr4 + ': 방의 개수 = ' + arr4.length + '<br>');
+        document.write('arr5 = ' + arr5 + ': 방의 개수 = ' + arr5.length + '<br>');
+        document.write('arr6 = ' + arr6 + ': 방의 개수 = ' + arr6.length + '<br>');
+
+
+        function array() { //가변인자 함수 Array와 같은 것을 수행하는 array()
+            // 함수를 호출할 때 배열을 생성되는데 그 배열을 arguments 라고 부름 
+            // 매개변수(인자)가 0: array();
+            // 매개변수(인자)가 1: 방의 개수가 매개변수만큼 잡힘 : array(3);
+            // 매개변수(인자)가 2: array(10,20,30);
+            var result = []; //1. 빈 배열을 만든다 
+            /*if (arguments.length == 0) {
+                //매개변수가 없을 때 실행할 명령어들 
+                alert('매개변수 없이 호출한 것');
+                //매개변수가 없기 때문에 배열에서 아무짓도 안해도 됨. 따라서 if문 없어져도 상관 없음
+            }*/
+
+            if (arguments.length == 1) {
+                //매개변수가 하나일때
+                //alert('매개변수 한개 ' + arguments[0] + '넣고 호출');
+                for (var cnt = 1; cnt <= arguments[0]; cnt++) {
+                    result.push(null);
+                }
+            } else if (arguments.length >= 2) {
+                //매개변수가 두개이상일때
+                //alert('매개변수 한개 ' + arguments[0] + arguments[1] + '넣고 호출');
+                //0방부터 끝방까지 push
+                for (var idx = 0; idx < arguments.length; idx++) {
+                    result.push(arguments[idx]);
+                }
+            }
+                //리턴 함수를 써야함. 배열을 만들고, 써야하니까 
+            return result;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

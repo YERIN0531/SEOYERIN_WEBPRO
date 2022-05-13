@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+    //가변인자함수(Array)
+    //가변인자함수 (인자가 변하는 가변인자함수 . 인자 = 매개변수)
+    //가변인자함수 : 매개변수의 갯수가 변할 수 있는 함수 ex.Array
+        var arr1 = [273, 2, 3, 'Hello',]; //,뒤에 없으면 length가 4개짜리 배열 
+        var arr2 = Array(273, 2, 3, 'Hello'); // 매개변수갯수가 2개이상일때 배열을 만듦
+                                              // 매개변수갯수가 1개이거나 없을땐 다른짓으로 함 
+
+        // 매개변수 갯수에 따라 Array() 안에 들어가는 의미가 달라짐
+        var arr3 = [, , ,]; // 방 3개짜리 빈 배열 -- ,갯수 = 방개수
+        var arr4 = Array(3); //매개변수 1개일 경우 ; 방 3개짜리 빈 배열 
+
+        var arr5 = []; //방의 갯수가 0인 배열
+        var arr6 = Array(); //매개변수가 0개일 경우 : 방의 갯수가 0인 배열
+
+        document.write('arr1 = ' + arr1 + ': 방의 개수 = ' + arr1.length+'<br>');
+        document.write('arr2 = ' + arr2 + ': 방의 개수 = ' + arr2.length +'<br>');
+        document.write('arr3 = ' + arr3 + ': 방의 개수 = ' + arr3.length +'<br>');
+        document.write('arr4 = ' + arr4 + ': 방의 개수 = ' + arr4.length +'<br>');
+        document.write('arr5 = ' + arr5 + ': 방의 개수 = ' + arr5.length +'<br>');
+        document.write('arr6 = ' + arr6 + ': 방의 개수 = ' + arr6.length +'<br>');
+    
+    </script>
+</head>
+<body>
+
+</body>
+</html>

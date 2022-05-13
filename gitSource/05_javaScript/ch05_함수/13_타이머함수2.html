@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        //1초마다 현재 시간을 출력 -> 1초마다 현재 시간 출력(10초후 타이머 중지)
+        var id = setInterval(function () { //일정시간마다 콜백함수 실행
+            document.write(new Date() + '<br>');
+        }, 1000);
+        setTimeout(function () {
+            clearInterval(id);
+            document.write('DONE');
+        }, 10000); // 10초후에 clearInterval 하겠다는 뜻
+    </script>
+</head>
+<body>
+
+</body>
+</html>

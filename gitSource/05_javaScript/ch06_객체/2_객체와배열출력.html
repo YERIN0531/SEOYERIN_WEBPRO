@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var arr = [1, 2, 300]; //출력 : 일반 for문, for-in문, forEach()함수 이용
+        for (var idx in arr) {
+            document.write(idx + " : " + arr[idx] + "<br>");
+        }
+        //객체는 출력 할 때 : for-in문만 이용가능
+        var obj = {
+            'name' : '홍길동',
+            'age': '20'
+        };
+        for (var key in obj) {
+            document.write(key + ":" + obj[key] + "<br>")
+        }
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

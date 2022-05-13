@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //funVar('홍길동'); 익명함수의 정의가 호출시점보다 밑에 있으면 에러 
+        var funVar = function (i) {// funcction()괄호 안에 매개변수 집어 넣는 것 
+            alert(i + '값을 매개변수로 받은 익명함수 호출됨'); //호출을 해야 이 부분이 화면에 뜸 
+        };
+        //funVar(2); //호출할때 괄호안에 매개변수 집어 넣어주면 됨 (i값에 해당되는 아이 )
+        funVar('홍길동');//매개변수의 타입이 상관이 없음 
+        funVar(50);
+
+        //이렇게 prompt로 값을 집어넣을수도 있음 
+        var param = prompt('매개변수로 넣을 값은?');
+        funVar(param);
+        funVar(true);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

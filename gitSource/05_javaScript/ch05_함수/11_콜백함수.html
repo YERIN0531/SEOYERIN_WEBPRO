@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        //var i = function () { alert(1); };
+        //callTenTimes(i);
+
+        function callTenTimes(callback) { //매개변수로 받은 콜백함수를 10번 호출
+            for (var cnt = 0; cnt < 10; cnt++) {
+                callback();
+            }
+        }
+        var funVar = function () {
+            document.write(new Date() + '<br>');
+        };
+        callTenTimes(funVar);
+        /* callTenTimes(function(){
+        document.write(new Date() + '<br>');});  이렇게 더 많이 씀 */ 
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // 현재 밀리세컨 (을 어떤 변수(st)에다가 넣고)
+        /* 반복문 {
+         * 반복 횟수 ++
+          * (진짜 할일은 여기다가 넣기)
+         * 현재 밀리세컨이 st + 1000이면 스톱 }
+         */
+        var cnt = 0;// 반복 횟수가 저장될 변수
+        var startTime = new Date().getTime();//현재 밀리세컨 
+        while (new Date().getTime() <= startTime + 1000) {
+            cnt++;
+        }
+        document.write(cnt + '번');
+
+    </script>
+</head>
+<body>
+</body>
+</html>

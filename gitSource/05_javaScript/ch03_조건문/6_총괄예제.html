@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table{
+        border:1px solid gray;
+        padding:15px;
+        }
+        td{
+        text-align:center;
+        padding: 5px 15px;
+        }
+        input[type=text]
+        input[type=submit]{
+        border:0;
+        outline:0;
+        background-color:gray;
+        font-weight:bold;
+        font-size:1.5em;
+        padding: 0 20px;
+        margin-top:5px;
+        }
+        
+    </style>
+    <script>
+        function chk() {
+            var su1 = Number(frm.first.value);
+            var su2 = Number(frm.last.value);
+            var msg;
+            if (su1 == '' || su2 == '' || isNaN(su1) || isNaN(su2)) {
+                alert('수를 입력하세요');
+                return false;
+            } else if (su2 > su1) {
+                var msg = '<h3>두번째 수가 ' + (su2 - su1) + '만큼 더 크다</h3>';
+                /*alert('두번째 수가 ' + (su2 - su1) + '만큼 더 크다');*/
+                document.body.innerHTML += msg;
+                msg1 = msg.substring(4);
+                msg1 = msg1.substring(0, msg1.indexOf('</h3>'));
+                alert(msg1);
+                frm.first.value = su1;
+                frm.last.value = su2;
+                return false;
+            } else if (su1 > su2) {
+                var msg = '<h3>첫번째 수가' + (su1 - su2) + '만큼 더 크다</h3>';
+                document.body.innerHTML += msg;
+                msg1 = msg.substring(4);
+                msg1 = msg1.substring(0, msg1.indexOf('</h3>'));
+                alert(msg1);
+                frm.first.value = su1;
+                frm.last.value = su2;
+                return false;
+            } else if (su1 = su2) {
+                var msg = '<h3>첫번째 수와 두번째 수는 같다</h3>'
+                document.body.innerHTML += msg;
+                msg1 = msg.substring(4);
+                msg1 = msg1.substring(0, msg1.indexOf('</h3>'));
+                alert(msg1);
+                frm.first.value = su1;
+                frm.last.value = su2;
+                return false;
+            }
+            
+            return true;
+        }
+        
+    </script>
+</head>
+<body>
+<form name="frm" onsubmit="return chk()">
+    <table>
+    <tr>
+        <td>첫번째수</td>
+        <td>
+            <input type="text" name="first" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            두번째수
+        </td>
+        <td>
+            <input type="text" name="last" />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="submit" value="결과" />
+        </td>
+    </tr>
+    </table>
+</form>
+</body>
+</html>

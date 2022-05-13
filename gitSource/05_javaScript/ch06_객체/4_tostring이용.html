@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        //this.age = 내 객체가 가지고 있는 age 
+        //this.name = 내 객체의 name
+        var person = {
+            name: '홍길동',
+            age: 20,
+            address: '서울시 강남구',
+            eat: function (food) {
+                var msg = this.age + '살 ' + this.name + '님은 ' + food + '를 먹습니다;
+                document.write(msg);
+                alert(msg);
+            },
+            toString : function () {
+                var output = '';
+                for (var key in this) {
+                    if (key != 'eat' && key != 'toString') {
+                        output += key + ':' + this[key] + '\n';
+                    }//if 문
+                }//for문
+                return output;
+            },
+        };
+        person.eat('덮밥'); // person.eat를 호출한 것 
+        //document.write(person.toString().replace('\n', '<br>'));
+        document.write(replaceAll(person.toString(),'\n', '<br>'));
+        alert(person.toString());
+        replaceAll("안녕\n방가", "\n", "<br>");
+        function replaceAll(str, oldStr, replaceStr) {
+                var splitStr = str.split(oldStr);
+                var result = splitStr.join(replaceStr);
+            return result;
+            return str.split(oldStr).join(replaceStr);
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

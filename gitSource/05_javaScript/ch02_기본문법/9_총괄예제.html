@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+    //1. prompt 함수를 이용해서 국, 영어 점수를 입력받습니다.(0~100점)
+    //2. isNaN함수를 이용해서 점수를 입력하지 않았을 경우 점수를 다시 입력받아 (do-while)
+        //3. 영어와 국어 점수의 평균을 document.write를 이용해서 출력 
+        /*while (true) {
+            scoreKor = prompt("국어점수를 입력하세요", "0~100점");
+            if (scoreKor == null) {
+                    alert("점수를 입력하세요");
+             } else {
+                score1 = Number(scoreKor);
+                if (isNaN(score)) {
+                    alert('점수를 입력하세요')
+                } else {
+                    result = score1 > 70 ? "잘했다" : "못했다";
+                }
+                document.write(result);
+
+            }
+        }
+        scoreEng = prompt("영어점수를 입력하세요", "0~100점");
+        if (scoreEng == null) {
+            alert("점수를 입력하세요");
+        } else {
+            score = Number(scoreEng);
+        }*/
+
+        do {
+            korStr = prompt('국어점수?', '0~100');
+            kor = Number(korStr);
+            if (korStr != null && korStr != '' && !isNaN(kor) && kor >= 0 && kor <= 100) {
+                break;
+            } else {
+                alert('올바른 점수를 입력하세요');
+            }
+        }while(true);
+        do {
+            engStr = prompt('영어점수?', '0~100');
+            eng = Number(engStr);
+            if (engStr != null && engStr != '' && !isNaN(eng) && eng >= 0 && eng <= 100) {
+                break;
+            } else {
+                alert('올바른 점수를 입력하세요');
+            }
+        } while (true);
+        document.write('평균 : ' + (kor+eng)/2);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

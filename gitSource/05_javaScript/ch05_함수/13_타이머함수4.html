@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        for (var i = 0; i < 3; i++) {
+            var fun = function (j) {
+                setTimeout(function () { alert(j); }, 0);
+            };
+            fun(i);
+            //fun(0) - alert(0)을 0초 후 타이머
+            //fun(1) - 매개변수로 들어온 1을 0초후에 뿌리는 것 
+            //fun(2) - 매개변수로 들어온 1을 0초후에 뿌리는 것 
+        }
+
+
+        /*
+        [0, 1, 2].forEach(function (data, idx) {
+            setTimeout(function () {
+                alert(data);
+                //data = 0일때, alert(data) - 0초 후 타이머
+                //data = 1일때, alert(data) - 0초 후 타이머
+                //data = 2일때, alert(data) - 0초 후 타이머
+            }, 0);
+        });
+
+
+        //경고창 뜨는 순서 : 3-3-3 (for문이 다 돌고 setTime이 돌기 때문에 for문 끝인3이 됐을때 돌아옴 )
+        /*for (var i = 0; i < 3; i++) {
+            setTimeout(function () {
+                alert(i);
+            }, 0);
+            // i가 0일때, alert(i) - 0초 후 타이머
+            // i가 1일때, alert(i) - 0초 후 타이머
+            // i가 2일때, alert(i) - 0초 후 타이머
+            // i가 3일때, alert(i) - 0초 후 타이머
+
+        }*/
+    </script>
+</head>
+<body>
+
+</body>
+</html>

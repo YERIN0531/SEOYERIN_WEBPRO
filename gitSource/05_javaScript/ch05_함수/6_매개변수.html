@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // 함수의 오버로딩이 안됨 ㅠㅠ 
+        document.write('pow(4,2) = ' + pow(4, 2) + '<br>');
+
+        // 선언된 함수의 매개변수보다 많은 매개변수로 호출 :  호출시 뒷 부분은 무시
+        document.write('pow(3,2,2) = ' + pow(3, 2, 2) + '<br>'); // 뒷 부분은 무시됨 3,2까지만 읽는것
+        document.write('pow(3,2,2,3,3) = ' + pow(3, 2, 2, 3, 3) + '<br>');
+
+        // 선언된 함수의 매개변수보다 적은 매개변수로 호출 : 할당할 값이 없어 undefined가 됨 
+        document.write('pow(4) = ' + pow(3) + '<br>'); // y에 들어갈 값을 안써줘서 값을 할당할수 없음. 
+                                                       // y는 undefined가 됨 - 1이랑 undefined랑 비교할 수 없으니 false
+                                                       // 그럼 for문을 한번도 수행할 수 없으니 result는 무조거 1을 return
+        document.write(pow()); // 매개변수에 아무것도 쓰지 않아도 동일하게 false값인 1을 return 
+
+
+        function pow(x,y) {// 첫번째 매개변수의 두번째 매개변수 승 - x의 y승을 리턴하는 함수 : pow(4,2);
+            var result = 1; //누적곱을 계산해야 하기 때문에 1로 
+            for (var i = 1; i <= y; i++) { //for문은 y번 반복
+                //result = result * x;
+                result *= x;
+            }
+            return result; //return 안해주면 값이 undefined가 됨 (매개변수가 있을땐 return 꼭 써주자)
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

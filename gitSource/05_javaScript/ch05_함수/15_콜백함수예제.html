@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+    body{
+    font-weight:bold;
+    }
+    </style>
+    <script>
+        var col = ['white', 'black', 'red'];
+        //var img = ['img/img01.png', 'img/img02.png', 'img/img03.png'];
+        var img = ['url("img/img01.png")', 'url("img/img02.png")', 'url("img/img03.png")']
+        var s = 0;
+       //1초마다 백그라운드이미지가 수정되면서 시간출력(10초동안)
+        var id = setInterval(function () {
+            document.write(new Date() + '<br>');
+            document.body.style.color = col[s % 3];
+            //document.body.style = 'background-image : url("img/img01.png")'
+            //document.body.style = 'background-image : url("img/img01.png)';
+            document.body.style.backgroundImage = img[s % 3];
+            document.body.style.backgroundSize = '100%';
+            s++;
+        }, 1000);
+        setTimeout(function () { clearInterval(id) }, 10000);
+
+
+
+        //document.body.style = 'color:black;';
+        //document.body.style = 'black';
+
+       /* [0, 1, 2].forEach(function (data, idx) {
+            setTimeout(function () {
+                document.write(data);
+                //data = 0일때, alert(data) - 0초 후 타이머
+                //data = 1일때, alert(data) - 0초 후 타이머
+                //data = 2일때, alert(data) - 0초 후 타이머
+            }, 1000);
+        });
+
+
+        /*var id = setInterval(function () {
+            document.write('사진1');
+            document.write('사진2');
+            document.write('사진3');
+        }, 1000);*/
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+    img{width:500px;}
+    </style>
+    <script>
+    //오전에 접속하면 오전 그림과 메세지가 오후에 접속하면 오후 글미과 메세지 출력
+    // [자바에서 : Date date = new Date()]
+       // var date = new Date(); //클래스를 만들지 않고 쓸 수 있는 애 1 
+        //var hour = date.getHours(); //date에 있는 시간을 가지고와서 hour라는 함수에 넣겠다
+        var hour = new Date().getHours();
+        if (hour < 12) {
+            document.write('<h3>상쾌한 오전입니다</h3><br>')
+            document.write('<img src="img/am.jpg" alt="오전그림">');
+        } else {
+            document.write('<h3>집에 가는 오후입니다</h3><br>');
+            document.write('<img src="img/pm.jpg" alt="오후그림">');
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+    //선언적 함수를 만들었는데, 다른 사람들의 함수 이름과 겹쳐버리면?
+    // 자바에서는 이름이 동일하면 에러가남
+        function funVar() {
+            alert('함수 A');
+        }
+        funVar();
+        // 선언적 함수의 재정의 
+        function funVar() {
+            alert('함수 B');
+        }
+        funVar();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

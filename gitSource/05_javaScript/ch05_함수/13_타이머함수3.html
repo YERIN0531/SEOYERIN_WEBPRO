@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>//경고창 뜨는 순서 A - C - B (타이머가 구동되는 동시에 마지막에 수행됨)
+        alert('A');
+        setTimeout(function () { alert('B'); }, 0);
+        alert('C');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

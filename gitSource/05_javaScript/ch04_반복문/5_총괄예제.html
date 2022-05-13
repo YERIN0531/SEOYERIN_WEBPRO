@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var cnt = 0;
+        var sum = 0;
+        var right = 0;
+        var wrong = 0;
+        
+        
+        while (confirm('누적할래?')){  
+                var score = Number(prompt('누적할 점수?'));
+            if (score != null && score != '' && !isNaN(score) && score >= 0 && score <= 100) {
+                cnt++;
+                right++;
+                sum += score; 
+                } else {
+                alert('유효한 점수를 입력해 주세요');
+                cnt++;
+                wrong++;
+                
+            }
+        } 
+        document.write(cnt + '번 입력' + '<br>');
+        document.write('누적점수 : ' + sum + '<br>');
+        document.write('점수를 제대로 입력한 횟수 : ' + right + '<br>');
+        document.write('점수를 잘못 입력한 횟수 : ' + wrong + '<br>');
+       
+    </script>
+</head>
+<body>
+
+</body>
+</html>

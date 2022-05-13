@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function test(name) {
+            var msg = 'Hello, ' + name + '님 방가방가';
+            //클로저함수 : return 된 함수 
+            return function () {
+                alert(msg);
+            };
+        }
+        var f = test('홍길동'); // f는 함수가 들어오게됨 
+        f();
+        // 밑에 처럼하면 구조만 나옴
+        // document.write(f);
+        //alert(f);
+
+        // 하지만 이렇게 안씀 제대로 쓰는건 다음장에서
+    </script>
+</head>
+<body>
+
+</body>
+</html>
