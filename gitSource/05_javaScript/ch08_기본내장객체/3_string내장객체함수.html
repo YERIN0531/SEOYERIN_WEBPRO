@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        String.prototype.replaceA = function (oldStr, newStr) {
+            var s1 = this.split(oldStr); // ['abc', 'abcd', 'abc'];
+            var s2 = s1.join(newStr); //'abc-abcd-abc'
+            return s2;
+            // =return this.split(oldStr).join(newStr);
+        };
+        var str = 'abc@abcd@abc';
+        document.write('@를 -로' + str.replaceA('@', '-') + '<br>');
+        document.write('@를 없애기 : ' + str.replaceA('@', '') + '<br>');
+        document.write('글씨 길이 : ' + str.length + '<br>');
+        document.write('글씨 연결 : ' + str.concat(str) + '<br>');
+        //str.substr(a,b); a번째(맨처음은 0번째)부터 b개 글자 추출 
+        document.write('3번째 글자부터 5개 추출 : ' + str.substr(3, 5) + '<br>');
+        //str.substring(a,b); a번째 글자부터 b번째 글자 앞까지
+        document.write('3번째 글자부터 5번째 글자 앞까지 : ' + str.substring(3, 5) + '<br>');
+        document.write('앞부터 일치하는 위치 : ' + str.indexOf('@') + '<br>');
+        document.write('뒤부터 일치하는 위치 : ' + str.lastIndexOf('@') + '<br>');
+        document.write('없는 문자 위치 : ' + str.indexOf('X') + '<br>'); // -1
+        document.write('__abc에서 양쪽 space없애기 : ' + '  abc  '.trim() + '<br>');
+        document.write('  abc  abc   '.replaceA(' ', '') + '<br>');
+        document.write('대문자로 변환 : ' + str.toUpperCase() + '<br>');
+        document.write('소문자로 변환 : ' + str.toLowerCase() + '<br>');
+
+        //밑엔 교안보고 그냥 해본거 위에껀 자주 쓰는 거 
+        document.write(str.charAt(3)+'<br>');
+        document.write(str.charCodeAt(3)+'<br>');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

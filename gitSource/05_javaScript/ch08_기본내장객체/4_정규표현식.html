@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+    /*--정규표현식 : 정규표현식 연습장을(http://www.regexr.com)통해 만들어진 정규표현식 TEST
+        [0 - 9] 0~9사이 한 글자
+    [a - zA - Z] : 알파벳중 한 문자
+    [가 - 힣] : 한글 중 한 문자(자음모음안됨)
+    [가 - 힣ㄱ - ㅎㅏ - ㅣ] 한글, 자음, 모음 
+            { n } : n번 반복
+            { n, m } : 최소 n번, 최대 m번 반복(0 < n <= m)
+        \d : 숫자[0 - 9]와 동일
+        \w : 문자(숫자와 알파벳) 중 한문자
+    + : 1번 이상 반복
+    * : 0번 이상 반복
+        . : '\n'을 제외한 임의의 한문자 자리수
+        \. : .문자
+        */
+        var str = 'abcd@ef';
+        //패턴 (원래 정규표현식은 //사이에 들어감)
+        var patternNum = /[0-9]/;    //숫자 패턴
+        var patternEng = /[a-zA-Z]/; //알파벳 문자 패턴
+        var patternKor = /[가-힣ㄱ-ㅎㅏ-ㅣ]/; //한글 문자 패턴
+        var patternSpc = /[~!@#$%^&*()_+|<>?:;{}\\\[\]]/; //특수문자 패턴 [ => \[, ]=>\] \=>\\
+        var patternMail = /\w+@\w+(\.\w{2,3}){1,2}/;
+        document.write('글씨길이 : ' + str.length + '<br>');
+        document.write('스트링 더하기 : ' + str.concat(str) + '<br>');
+        document.write('str에 숫자가 포함되어 있는지 : ' + patternNum.test(str) + '<br>');
+        document.write('str에 알파벳이 포함되어 있는지 : ' + patternEng.test(str) + '<br>');
+        document.write('str에 한글이 포함되어 있는지 : ' + patternKor.test(str) + '<br>');
+        document.write('str에 특수문자가 포함되어 있는지 : ' + patternSpc.test(str) + '<br>');
+        
+
+
+
+    </script>
+</head>
+<body>
+    <!-- 정규표현식 :정규표현식 연습장을(http://www.regexr.com)통해 만들어진 정규표현식 TEST
+                [0-9] 0~9사이 한 글자
+                [a-zA-Z] : 알파벳중 한 문자
+                [가-힣] : 한글 중 한 문자(자음모음안됨)
+                [가-힣ㄱ-ㅎㅏ-ㅣ] 한글, 자음, 모음
+                {n} : n번 반복
+                {n,m} : 최소 n번, 최대 m번 반복 (0<n<=m)
+                \d : 숫자[0-9]와 동일
+                \w : 문자(숫자와 알파벳) 중 한문자
+                + : 1번 이상 반복
+                * : 0번 이상 반복
+                . : '\n'을 제외한 임의의 한문자 자리수
+                \. : .문자
+            -->
+</body>
+</html>

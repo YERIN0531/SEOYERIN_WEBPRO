@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+    //객체배열 : 배열 안에 객체 생성하는 것 
+        var students = [
+            {
+                name: '홍길동',
+                kor: 99,
+                mat: 90,
+                eng: 98,
+                sci: 100
+            },
+            { name: '김길동', kor: 100, mat: 90, eng: 98, sci: 100 }
+        ];
+        students.push({ name: '김길동', kor: 100, mat: 90, eng: 98, sci: 100 });
+        students.push({ name: '신길동', kor: 80, mat: 88, eng: 70, sci: 88 });
+        students.push({ name: '마유동', kor: 90, mat: 92, eng: 99, sci: 100 });
+        /*students[0].getSum = function () { return 국 + 영 + 수 + 과};
+        students[1].getSum = function () { return 국 + 영 + 수 + 과};
+        students[2].getSum = function () { return 국 + 영 + 수 + 과};
+        students[3].getSum = function () { return 국 + 영 + 수 + 과};
+        students[4].getSum = function () { return 국 + 영 + 수 + 과 };*/ //for문으로 돌리기
+        
+        //뭔가를 추가하고 싶을땐 일반 for문이나 for-in쓰기 
+        for (var idx in students) { //idx가 0~4까지 
+            
+            students[idx].getSum = function () {
+                
+                return this.kor + this.mat + this.eng + this.sci;
+            };
+            students[idx].getAvg = function () {
+                
+                return this.getSum() / 4;
+            };
+            students[idx].toString = function () {
+                var output = '';
+                for (var key in this) {
+                    if (key != 'getSum' && key != 'getAvg' && key != 'toString') {
+                        output += key + ':' + this[key] + '<br>';
+                    } else if (key == 'getSum' || key == 'getAvg') {
+                        output += key.substring(3).toUpperCase() + this[key]() + '<br>';
+                        //getSum이 아니라 Sum이라고 쓰고 싶어서 substring 하는 것
+                    }//else if
+                }//for
+                return output;
+            };//toString
+        }//for
+
+        //1. 일반 for문 [배열을 출력해야 하니 당연히 for문 활용]
+        document.write('<h3>일반 for문 출력</h3>');
+        var output ='';
+        for (var idx = 0; idx < students.length; idx++) {
+            output += idx + '번째' + '<br>';
+            output += students[idx];
+        }
+        document.write(output);
+        alert(output.replaceAll('<br>', '\n'));
+        document.write('<hr>');
+
+        //2. for - in문 활용 가능
+        document.write('<h3>for-in문 출력</h3>');
+        var output = '';
+        for (var idx in students) {
+            output += idx + '번째' + '<br>' + students[idx];
+        }
+        document.write(output);
+        document.write('<hr>');
+
+        //3. forEach()함수 이용
+        document.write('<h3>forEach문 출력</h3>');
+        students.forEach(function (data, idx) {
+            document.write(idx + '번째 : ' + data + '<br>');
+        });
+
+
+
+
+
+
+
+
+        //4.replaceAll이 없다고 가정했을때 함수를 만드는 방법 
+        /*
+        function replaceAll(str, oldStr, newStr) { //str내의 oldStr부분을 newSTr로 모두 교체 
+        //str = "aaaaaa<br>bbbbbb<br>cccccc";
+        splitStr = ['aaaaaa', 'bbbbbb', 'cccccc']; //split은 쪼개겠다는 뜻
+        joinStr = 'aaaaaa\nbbbbbb\ncccccc'; //
+            var splitStr = str.split(oldStr);
+            var joinStr = splitStr.join(newStr);
+            return joinStr;
+            //return str.split(oldStr).join(newStr);
+        }*/
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

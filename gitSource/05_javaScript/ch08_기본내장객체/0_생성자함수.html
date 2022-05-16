@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        //생성자함수 생성
+        function Rectangle(width, height) {
+            this.width = width;
+            this.height = height;
+        }//생성자함수는 return 하지 않음
+
+        Rectangle.prototype.getArea = function () {
+            return this.width * this.height;
+        };
+
+        //객체 생성 및 생성자 함수 호출
+        rect1 = new Rectangle(5, 3);
+        rect2 = new Rectangle(3, 4);
+
+        //constructor - 말 그대로 생성자 함수를 가르킴 . 내장객체 안에 있는 함수기 때문에 사용 가능
+        document.write('rect1의 생성자함수는 ' + rect1.constructor  + '<br>');
+        document.write('rect2의 생성자함수는 ' + rect2.constructor  + '<br>');
+
+        //typeof 를 쓰면 object로 나옴 - object인건 아는데 어떤 구조를 가지고 있는지 궁금하기 때문에 constructor사용 
+        document.write('rect1의 타입은 : ' + typeof (rect1) + '<br>');
+        if (rect1.constructor == rect2.constructor) {
+            document.write('rect1과 rect2의 타입은 같다');
+        } else {
+            document.write('rect1과 rect2의 타입은 다르다');
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

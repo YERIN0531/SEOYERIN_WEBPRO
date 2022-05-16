@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+    table{
+    border:3px solid navy;
+    margin : 0 auto;
+    }
+    td{
+    font-weight:bold;
+    padding:10px 30px 10px 30px;
+    text-align:center;
+    }
+    input[type='text']{
+    border: 1px solid navy;
+    height:25px;
+    outline:0;
+    }
+    input[type='password']{
+    border: 1px solid navy;
+    height:25px;
+    outline:0;
+    }
+    input[type='submit']{
+    padding : 0 20px;
+    border:1px solid navy;
+    font-weight:bold;
+    background-color:#135e7a;
+    color:white;
+    height:30px;
+    border-radius:10px;
+    }
+    input[type='reset']{
+    padding : 0 20px;
+    border:1px solid navy;
+    font-weight:bold;
+    background-color:#135e7a;
+    color:white;
+    height:30px;
+    border-radius:10px;
+    }
+    </style>
+    <script>
+        
+        function chk() {
+            var patternMail = /\w+@\w+(\.\w{2,3}){1,2}/;
+            var patternNum = /[0-9]/;    //숫자 패턴
+            var patternEng = /[a-zA-Z]/; //알파벳 문자 패턴
+            var patternKor = /[가-힣ㄱ-ㅎㅏ-ㅣ]/; //한글 문자 패턴
+            var patternSpc = /[~!@#$%^&*()_+|<>?:;{}\\\[\]]/; //특수문자 패턴 [ => \[, ]=>\] \=>\\
+            var names = frm.name.value;
+            var emails = frm.mail.value;
+            //var pw1 = frm.pw.value;
+            //var pw2 = frm.pwchk.value;
+
+            if (!names) {
+                alert('이름을 작성해 주세요');
+                return false;
+            } else if (names.length < 2 || patternNum.test(names) || patternSpc.test(names)) {
+                alert('이름에는 특수문자와 숫자가 올 수 없습니다.');
+                return false;
+            } else if (!emails) {
+                alert('이메일을 작성해주세요')
+                return false;
+
+            } else if (!patternMail.test(emails)) {
+                alert('이메일의 형식을 지켜주세요');
+                return false;
+
+
+            } else if (!frm.pw.value) {
+                alert('비밀번호를 입력하세요');
+                frm.pw.focus;
+                return false;
+            } else if (!patternEng.test(frm.pw.value) || !patternNum.test(frm.pw.value) || !patternSpc.test(frm.pw.value) || frm.pw.value.length < 4) {
+                alert('비밀번호는 영어와 숫자, 특수문자를 섞어서 4글자 이상이여야 합니다.');
+                return false;
+
+            } else if (frm.pw.value != frm.pwchk.value) {
+                alert('두 비밀번호가 일치하지 않습니다.');
+                return false;
+            }
+            return true;
+                //document.write('str에 숫자가 포함되어 있는지 : ' + patternNum.test(str) + '<br>');
+
+        }
+    </script>
+</head>
+<body>
+ <form name="frm" onsubmit="return chk()">
+    <table>
+    <tr>
+        <td>이름</td>
+        <td>
+        <label for="name">
+        <input type="text" name="name" id="name" placeholder="특수문자와 숫자 못와" />
+        </label>
+        </td>
+    </tr>
+    <tr>
+        <td>메일</td>
+        <td>
+        <label for="mail">
+        <input type="text" name="mail" id="mail" placeholder="메일형식에 맞추세요" />
+        </label>
+        </td>
+    </tr>
+    <tr>
+        <td>비밀번호</td>
+        <td>
+        <label for="pw">
+        <input type="password" name="pw" id="pw" />
+        </label>
+        </td>
+    </tr>
+    <tr>
+        <td>비밀번호</td>
+        <td>
+        <label for="pwchk">
+        <input type="password" name="pwchk" id="pwchk" />
+        </label>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+        <input type="submit" value="회원가입" />
+        <input type="reset" value="취소" />
+        <input type="submit" value="로그인" />
+        </td>
+    </tr>
+    </table>
+
+ </form>
+</body>
+</html>

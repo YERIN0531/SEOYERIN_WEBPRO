@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var num = 273.5590332; //var num = new Number(273.~);
+        document.write(num + '<br>');
+        document.write('지수형 표현 : ' + num.toExponential(5) + '<br>'); //toExponetial - 지수형 표현 ()안에는 소숫점 몇까지인지
+        document.write('1자리까지표현 : ' + num.toFixed(1) + '<br>'); // toFixed - 소숫점 표현()안에는 소숫점 몇자리까지 고정인지
+        document.write('소수점 1자리까지(반올림) : ' + Math.round(num) + '<br>'); //round - 소수점 에서 반올림
+        //소수점자리가 아니라 한자리에서반올림하고 싶으면 num에 *10하면 됨 
+        document.write('소수점 1자리까지(반올림) : ' + Math.round(num, 1) + '<br>');
+        document.write('숫자를 4개만 출력 : ' + num.toPrecision(4));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

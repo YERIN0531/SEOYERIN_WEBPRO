@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var s = { name: '홍길동', kor: 99, mat: 90, eng: 98, sci: 100 };
+        var s = makeStudent('홍길동', 99, 90, 98, 100);
+        function makeStudent(name, kor, mat, eng, sci) {
+            // name : name [앞 name : 속성 이름 뒤 || name : 매개변수로 들어온 name]
+            var resultObj = {
+                name: name,
+                kor: kor,
+                mat: mat,
+                eng: eng,
+                sci: sci,
+                getSum: function () {
+                    return this.kor + this.mat + this.eng + this.sci;
+                },
+                getAvg: function () {
+                    return this.getSum() / 4;
+                },
+                toString: function () {
+                    var output = '';
+                    for (var key in this) {
+                        if (key != 'getSum' && key != 'getAvg' && key != 'toString') {
+                            output += key + ':' + this[key] + '<br>';
+                        } else if (key == 'getSum' || key == 'getAvg') {
+                            output += key.substring(3).toUpperCase() + this[key]() + '<br>';
+                            //getSum이 아니라 Sum이라고 쓰고 싶어서 substring 하는 것
+                        }//else if
+                    }//for
+                    return output;
+                } //tostring
+            };
+            return resultObj;
+        }//function
+        //var s = { name: '홍', kor: 90, mat: 90.....} 이렇게 해도 되지만
+        s = makeStudent('홍', 90, 90, 99, 98);
+        var students = [];
+        students.push(makeStudent('홍길동', 100, 100, 100, 100));
+        students.push(makeStudent('유길동', 90, 80, 70, 95));
+        students.push(makeStudent('마길동', 90, 99, 90, 99));
+
+        students.forEach(function (data, idx) {
+            document.write(idx + '번째 <br>' + data);
+        });
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+

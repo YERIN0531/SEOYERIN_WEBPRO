@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Student(name, kor, mat, eng, sci) {
+            this.name = name;
+            this.kor = kor;
+            this.mat = mat;
+            this.eng = eng;
+            this.sci = sci;
+            this.getSum = function () {
+                return this.kor + this.mat + this.eng + this.sci;
+            };
+            this.getAvg =function () {
+                return this.getSum() / 4;
+            };
+            this.toString = function () {
+                var output = '';
+                for (var key in this) {
+                    if (key != 'getSum' && key != 'getAvg' && key != 'toString') {
+                        output += key + ':' + this[key] + '<br>';
+                    } else if (key == 'getSum' || key == 'getAvg') {
+                        output += key.substring(3).toUpperCase() + this[key]() + '<br>';
+                        //getSum이 아니라 Sum이라고 쓰고 싶어서 substring 하는 것
+                        //string이라는 내장객체에 substring이라는 함수가 있어서 쓸 수 있는 것
+                    }//else if
+                }//for
+                return output;
+            }; //tostring
+        }//function 생성자 함수기 때문에 return 없음
+
+        var students =
+            [new Student('홍길동', 100, 100, 100, 100),
+            new Student('마길동', 100, 100, 99, 100),
+            new Student('윤길동', 900, 80, 90, 70),
+            new Student('지울애', 10, 20, 30, 40)
+
+        ]; //생성자에 매개변수 5개 이상 들어와도 뒷부분 무시됨
+        students.pop(); //마지막 idx값 제거
+        document.write('제거후<br>');
+
+        students.forEach(function (data, idx) {
+            document.write(idx + '번째<br>' + data + '<hr>');
+        });
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

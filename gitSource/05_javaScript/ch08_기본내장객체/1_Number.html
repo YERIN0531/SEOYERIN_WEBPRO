@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+    /* 자바 : 기본자료형과 객체자료형의 차이 
+     * Integer iObj = new Integer(10);
+     * iObj.toString() 가능
+     * int i = 10;
+     * i.toString();
+     */
+     // 자바스크립트 : 기본데이터타입(number, string , boolean) - typeof 하면 나오는것들 VS 객체데이터타입(array, object 등)
+
+        var priNum = 273.21; //생성된 객체에 메소드가 없어 보이지만 올 수 있음
+                             //내부적으로 var priNum = new Number(273.21);로 잡히기 때문에 Number가 쓸 수 있는 메소드를 다 사용가능
+                             //prototype을 공유하기 때문에 타입만 Number일 뿐 객체인것 
+
+        // 즉 기본데이터 타입도 객체처럼 사용 가능
+        var objNum = new Number(273.21); //Number라는 내장객체타입이 있음
+
+        document.write('priNum의 타입은 : ' + typeof (priNum) + '<br>'); //number
+        document.write('objNum의 타입은' + typeof (objNum) + '<br>'); //object
+
+        //constructor : 생성자함수
+        document.write('priNum의 생성자 함수 : ' + priNum.constructor+'<br>');
+        document.write('objNum의 생성자 함수 : ' + objNum.constructor+'<br>');
+        
+        //Number.toFixed(1) : 소수점 1자리까지만
+        document.write(priNum.toFixed(1) + '<br>');
+        if (priNum.constructor == objNum.constructor) { //construoctor로 비교 했을때 동일하다고 나오는게 진짜 동일 
+            document.write('priNum과 objNum의 저장된 타입은 동일');
+        }
+        //즉 타입은 비록 달라보이지만 결국 둘의 저장된 타입은 동일하다는 것
+
+        // 내장객체 Number에 메소드 추가
+        // 앞 예제에서 Rectangle에 메소드를 추가하면 rect1과 rect2가 다 쓸 수 있는 것 처럼 
+        // Number에 메소드 추가하면 priNum과 objNum 둘다 사용 가능
+        
+        Number.prototype.method1 = function () {
+            alert('Number 타입은 다 쓸 수 있음');
+        };
+        //이렇게 메소드를 만들어줘야 priNum.method1(); , objNum.method1(); 쓸 수 있음 
+        priNum.method1();
+        objNum.method1();
+
+        //objNum은 객체타입 ------- obj에 메소드 추가 (객체 만들어 놓으면 메소드 추가 가능하니까)
+        objNum.method2 = function () {
+            alert('objNum에 메소드 추가');
+        };
+        objNum.method2(); //가능
+        //priNum.method2(); //불가능 왜? obj에 추가한거니까 
+
+
+
+        //priNum은 기본데이터 타입 -- priNum에 메소드 추가 불가
+        priNum.method3 = function () {
+            alert('priNum에 메소드 추가');
+        };
+
+        //(4) Object에 메소드 추가
+        Object.prototype.method4 = function () {
+            document.write('<hr>' + this);
+        };
+        priNum.method4();
+        objNum.method4();
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

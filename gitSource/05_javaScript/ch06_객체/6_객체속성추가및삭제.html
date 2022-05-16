@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script> //name = 속성 변수 = 키 
+        var student = {
+            'name': '홍길동',
+            'age' : 25
+        };
+        //기존데이터 변경 
+        student.name = '김길동';
+        document.write(student.name + '  ' + student['name'] + '<br>');
+        student['name'] = '신길동';
+        document.write(student.name + '  ' + student['name'] + '<br>');
+
+        //객체의 속성 추가(얼마든지가능)
+        student.kor = 100;
+        student.mat = 99;
+        student.hobby = '프로그래밍 구현';
+
+        //toString 안만들고 그냥 tostring 쓰면? - object tostring이 호출됨
+        document.write(student +'<br>');
+        document.write(student.toString() + '<br>');
+
+        //toString도 만드는거 가능
+        student.toString = function () {
+            //document.write('이름은' + name + '국어점수는' + kor + '수학점수는' + mat + '취미는' + hobby);
+            var output = '';
+            for (var key in this) {
+                if (key != 'toString') {
+                output += key + ' : ' + this[key] + '<br>';
+                }
+            }
+            return output;
+        };
+        document.write(student + '<br>');
+
+        //객체속성제거
+        delete (student.hobby);
+        delete (student.age);
+        document.write('객체 속성 제거 후 : ' + student + '<br>');
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
