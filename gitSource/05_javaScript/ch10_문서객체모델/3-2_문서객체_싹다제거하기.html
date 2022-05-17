@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function append() {
+            document.body.innerHTML += '<h1>HEADER</h2>';
+        }
+        function remove() {
+            //없애려면 h1태그를 가지고 와야됨
+            //다지우려면 for문 돌리고
+            var h = document.getElementsByTagName('h1');
+            for (var idx = h.length-1; idx >=0; idx--) {
+                document.body.removeChild(h[idx]);
+            }
+            //뒤에서부터 지워야 되니까 h.length의 길이의 -1 부터 , idx가 0방이 될때까지 idx를 줄이기 
+            
+        }
+    </script>
+
+</head>
+<body>
+        <button onclick="remove()">h1태그 제거하기</button>
+        <button onclick="append()">h1태그 추가하기</button>
+        <h1>HEADER</h1>
+</body>
+</html>

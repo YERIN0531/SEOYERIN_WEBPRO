@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+    table{
+    width:350px;
+    margin: 20px auto;
+    height:100px;
+    }
+    </style>
+    
+    <script>
+        var color = ['red','orange','yellow','green','blue','navy','violet','white'];
+        window.onload = function () {
+            var tds = document.querySelectorAll('td');
+            for (var idx in tds) {
+                tds[idx].style.backgroundColor = color[idx];
+            }
+        };
+        function bgChange(n) {
+            document.body.style.backgroundColor = color[n];
+        }
+    </script>
+</head>
+<body>
+<table>
+    <tr onmouseout="bgChange(7)">
+    <td onmouseover="bgChange(0)"></td>
+    <td onmouseover="bgChange(1)"></td>
+    <td onmouseover="bgChange(2)"></td>
+    <td onmouseover="bgChange(3)"></td>
+    <td onmouseover="bgChange(4)"></td>
+    <td onmouseover="bgChange(5)"></td>
+    <td onmouseover="bgChange(6)"></td>
+    </tr>
+</table>
+</body>
+</html>

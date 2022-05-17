@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var child;
+        function openBig() {
+        //새창열기(4_big.html)
+            child = open('5_big.html', '', 'width=650, height=750');
+            if (!child) {
+                alert('팝업 차단 해제하세요');
+            }
+        }
+
+        function closeBig() {
+            //열린 새창 닫기
+            child.close(); //window.close() : 현재창 닫기 
+        }
+    </script>
+</head>
+<body>
+<h2>작은 그림의 parent창</h2>
+<img src="img/small.jpg" alt="작은그림" 
+     onmouseover="openBig()"
+     onmouseout="closeBig()"
+/>
+<!--자바스크립트에 opeonBig()과 closeBig()에 대한 함수를 만들자-->
+</body>
+</html>

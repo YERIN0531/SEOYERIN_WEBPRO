@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var child = open('6..html', '', 'width=10,height=10');
+        //스크린마다 화면의 크기가 다르기 때문에, 각 컴퓨터의 화면에 맞는 scree의 width /2 만큼 보내기 
+        //창의 width를 w라는 변수에 받아오기
+        var w = screen.width / 2; //child의 width값
+        var h = screen.height / 2;
+        child.resizeTo(w, h);
+        child.moveTo(w / 2, h / 2);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

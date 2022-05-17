@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+    //생성자 함수 만든 후 new Student로 객체 생성
+        function Student(name, kor, mat) {
+            this.name = name;
+            this.kor = kor;
+            this.mat = mat;
+        }
+        //객체내에 name, kor, mat는 다들어가고 공통으로 들어가는 함수는 프로토타입에 생성
+        Student.prototype.getSum = function () {
+            return this.kor + this.mat;
+        };
+        Student.prototype.getAvg = function () {
+            return this.getSum() / 4;
+        };
+        Student.prototype.toString = function () {
+            return this.name + '(' + this.kor + ',' + this.mat +
+                '총점 : ' + this.getSum() + '평균 : ' + this.getAvg(); ')';
+
+        };
+        //밑에 push로 배열안에 넣어도 되고, 배열안에 new Student 써주기 
+        var students = [new Student('홍길동', 100, 100),
+                        new Student('김길동', 50, 60),
+                        new Student('마길동', 20, 10),
+                        new Student('윤길동', 70, 60),
+                        new Student('천길동', 99, 99),
+        ];
+
+        
+        //출력만 할거면 forEach함수 추천
+        document.write('<h3>정렬 전 원 데이터</h3>');
+        students.forEach(function (value, idx) {
+            document.write(idx + ' : ' + value + '<br>');
+        });
+
+        //총점기준으로 오름차순 정렬(작은거부터 큰 거) 
+        document.write('<h3>총점 기준 정렬 후 데이터 </h3>');
+        //students.sort(); 객체에는 아스키코드가 없기 때문에 이렇게 하면 안됨 
+        //left, right도 기본타입이 아니라 객체 형태임 
+        students.sort(function (left, right) {
+            //return left-right 이렇게 쓸 수 없음 
+            return left.getSum() - right.getSum();
+        });
+        students.forEach(function (value, idx) {
+            document.write(idx + ' : ' + value + '<br>');
+        });
+
+        //평균기준으로 내림차순정렬(큰거부터)
+        document.write('<h3>평균 기준 정렬 후 데이터 </h3>');
+        students.sort(function (left, right) {
+            return right.getAvg() - left.getAvg();
+        });
+        students.forEach(function (value, idx) {
+            document.write(idx + ' : ' + value + '<br>');
+        });
+
+        //국어성적으로 오름차순정렬
+        document.write('<h3>국어 성적 정렬 후 데이터 </h3>');
+        students.sort(function (left, right) {
+            return left.kor - right.kor;// return 음수면 left가 앞. return 양수면 right가 앞
+                                        //- 숫자면 이렇게 해도 됨
+        });
+        students.forEach(function (value, idx) {
+            document.write(idx + ' : ' + value + '<br>');
+        });
+
+        //이름기준으로 (가나다순으로)오름차순정렬
+        document.write('<h3>이름 기준 정렬 후 데이터 </h3>');
+        students.sort(function (left, right) {
+            //return left.kor - right.kor; - 숫자면 이렇게 해도 됨 
+            if (left.name < right.name) { //왼쪽에 오는 name이 작으면 참 
+                return -1; //음수 아무거나 return 음수면 left가 앞에 
+            } else if (left.name > right.name) {
+                return 1; //양수 아무거나 
+            } else {
+                return 0; //return 양수도 아니고 음수도 아니면 위치 수정 안함 
+                          //return 0이면 위치 그대로 
+            }
+        });
+        students.forEach(function (value, idx) {
+            document.write(idx + ' : ' + value + '<br>');
+        });
+
+        
+    </script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

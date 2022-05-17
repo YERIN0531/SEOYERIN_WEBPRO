@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // window 속성, 속성값, 함수 다 들어가 있음 
+        /* 전체 다 출력 
+        var cnt = 0;
+        for (var key in window) {
+            document.write(++cnt + '. ' + key + ' : ' + window[key] + '<br>');
+        }
+        */
+
+        //일부만 출력
+        
+        var cnt = 0;
+        //var chk = function () { }; -- 익명함수로 만들어도되고, 아래처럼 선언함수로 만들어도 됨
+        function chk() { }
+
+        // window가 load될 때 수행할 함수
+        window.onload = function () { ('윈도우 로드'); };
+
+        for (var key in window) {
+            if (key == 'onload' || key == 'chk' || key == 'cnt') {
+                document.write(key + ' : ' + window[key] + '<br>');
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

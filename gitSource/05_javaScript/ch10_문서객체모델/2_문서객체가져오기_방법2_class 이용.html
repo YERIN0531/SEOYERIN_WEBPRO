@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            //getElementsByClassName()의 return 값은 배열로 - 지금은 clock1이 하나니깐 <h1>은 0방 // clock1이 하나가 더 있으면 1방 추가
+            var clock1 = document.getElementsByClassName('clock1');
+            clock1[0].innerHTML = new Date().toLocaleString();
+            var clock2 = document.getElementsByClassName('clock2')[0];
+            clock2.value = new Date().toLocaleString(); //value값에 넣어야 되는 거니까
+            //clock2.style = 'color:red'; font-size=20px;' -둘 중 하나 쓰면 됨
+            clock2.style.cssText = 'color:red;font-size=20px;';
+            clock2.style.color = 'red';
+            clock2.style.fontSize = '20px';
+        };
+    </script>
+</head>
+<body>
+<h1 class="clock1"></h1>
+<input type="text" class="clock2"/>
+</body>
+</html>

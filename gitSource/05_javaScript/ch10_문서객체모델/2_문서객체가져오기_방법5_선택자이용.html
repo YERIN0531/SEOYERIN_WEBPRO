@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+        //querySelector(선택자) : 선택자 중 첫번째 하나만 가져옴 - 5방법
+        //querySelectorAll(선택자): 선택자 요소 모두 가져옴(배열로 return) -6방법
+            var header1 = document.querySelector('.header');
+            header1.innerHTML = '바꿔';
+            var head = document.querySelectorAll('.header'); //배열로받음
+            for (var idx in head) {
+                //head[idx].style.backgroundColor = 'yellow';
+                //headp[idx].style.color = 'red';
+                head[idx].style.cssText = 'background-color : yellow; color:red;';
+            }
+        };
+    </script>
+</head>
+<body>
+<h1 class="header">HEADER1</h1>
+<h1 class="header">HEADER2</h1>
+</body>
+</html>

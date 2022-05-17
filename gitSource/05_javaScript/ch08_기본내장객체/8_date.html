@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="intervalDay.js"></script>
+    <script>
+    var now = new Date();
+        document.write('지금 : ' + now + '<br>');
+        document.write('오늘 날짜 : ' + now.toLocaleString() + '<br>');
+        document.write('날짜만 : ' + now.toLocaleDateString() + '<br>');
+        document.write('시간만 : ' + now.toLocaleTimeString() + '<br>');
+
+        //특정시점을 뽑고 싶을 때 
+        var limitday = new Date(2022, 7, 22, 15, 20, 0);//정임이 생일 8월22일 12시..(월은 -1)
+        var day = limitday.intervalDay(now); //이런함수 만들면 됨
+        day = now.intervalDay(limitday);//이렇게 해도 되고 위에처럼 해도 되고 
+        document.write('정임이 생일 : ' + limitday.toLocaleDateString() + '<br>');
+        document.write('남은 날짜 : ' + day + '일');
+</script>
+</head>
+<body>
+
+</body>
+</html>

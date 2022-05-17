@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        //Array 함수는 생성자 함수
+        //문자형 array
+        var arr1 = new Array('big', 'abc', 'zyx'); // = ['big', 'abc', 'zyx']
+        //숫자형 생성자함수
+        var arr2 = [52, 103, 273, 32, 57]; // = new Array(52, 103, 273, 32, 57);
+
+        document.write('arr1 정렬전 : ' + arr1 + '<br>');
+        arr1.sort(); //정렬 = ascii 코드 순으로 정렬
+        document.write('arr1 정렬후 : ' + arr1 + '<br>');
+
+        /*
+        document.write('arr2 정렬전 : ' + arr2 + '<br>');
+        arr2.sort(); //정렬이 안됨 아스키코드 순이다 보니 103이 작은수로 잡혀 먼저 나오게됨 
+        document.write('arr2 정렬후 : ' + arr2 + '<br>');
+        */
+        document.write('arr2 정렬전 : ' + arr2 + '<br>');
+        //callback함수를 써서 정렬하기
+        arr2.sort(function (left, right) {
+            //오름차순 (왼쪽이작고 오른쪽이 커)
+            return left - right; //오름차순 정렬(숫자에서만 가능 문자는 sort하면 됨)
+            //내림차순 (왼쪽이크고 오른쪽이 작음)
+            //return right - left; // 내림차순 정렬 
+        });
+        document.write('arr2 정렬후 : ' + arr2 + '<br>');
+
+        arr2.reverse(); //배열요소의 순서를 뒤집는 함수 - 오름차순 해놨으니 내림차순으로 나옴
+        document.write('arr2요소순서 뒤집은 후 : ' + arr2 + '<br>');
+
+        //문자에서도 가능 
+        arr1.reverse();
+        document.write('arr1요소순서 뒤집은 후 : ' + arr1 + '<br>');
+
+        var sliceArr2 = arr2.slice(0, 3); //0번째부터 3번째 앞까지 잘라
+        document.write('arr2 top3 : ' + sliceArr2);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
