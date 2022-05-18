@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var changeimg = ['img/but2.gif'];
+        var originimg = ['img/but1.gif'];
+        function change(n) {
+            var img1 = document.getElementsByTagName('img');
+            img1[n].src = changeimg[n];
+        }
+        function origin(n) {
+            var img2 = document.getElementsByTagName('img');
+            img2[n].src = originimg[n];
+        }
+    </script>
+</head>
+<body>
+<img src="img/but1.gif" onmousedown="change(0)" onmouseup="origin(0)" />
+</body>
+</html>

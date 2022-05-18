@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            //var btnA = document.getElementById('btnA');
+            var btnA = document.querySelector('#btnA');
+            //var btnB = document.getElementById('btnB');
+            var btnB = document.querySelector('#btnB');
+
+            var countA = document.querySelector('#countA');
+            var countB = document.querySelector('#countB');
+            //btnA를 클릭할 경우 강제로 btnB의 클릭이벤트 발생
+            btnA.onclick = function () {
+                //얘가 숫자가 아니라 문자로 인식되기 떄문에 제대로 안됨
+                //countA.innerHTML = countA.innerHTML + 1;
+                countA.innerHTML = Number(countA.innerHTML) + 1;
+                //btnB클릭이벤트 강제 발생
+                btnB.onclick();
+            };
+            
+            btnB.onclick = function(){
+                countB.innerHTML = Number(countB.innerHTML) + 1;
+            };
+
+
+        };
+    </script>
+</head>
+<body>
+<!-- 버튼 A 누를때마다 몇번 출력되는지 뜨기-->
+<button id="btnA">Button A</button>
+<button id="btnB">Button B</button>
+<h1>Button A - <span id="countA">0</span></h1>
+<h1>Button B - <span id="countB">0</span></h1>
+</body>
+</html>

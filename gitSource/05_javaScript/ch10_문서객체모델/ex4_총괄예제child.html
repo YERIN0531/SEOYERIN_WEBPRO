@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+    #wrap{
+    width:300px;
+    margin : 0 auto;
+    }
+    p{
+    text-align:center;
+    }
+    </style>
+    <script>
+        var id2;
+        window.onload = function () {
+            //1.openner에서 value값 받아오기 
+            var id1 = opener.document.getElementById('id1').value;
+            //2. parent에서 value값 받아오기 
+            var id2 = document.getElementById('id2').value;
+
+            id2 = document.getElementById('id2');
+            //modifyName.value = name;
+            id2.setAttribute('value', id1);
+        };
+        function sendParent() {
+            //opener.document.getElementById('id1').setAttribute('value', id2);
+            opener.document.getElementById('id1').value = document.getElementById('id2').value;
+            this.close();
+        }
+
+    </script>
+
+</head>
+<body>
+        <div id="wrap">
+            <p>ID<input type="text" id="id2" /><button>체크</button></p>
+            <p><button onclick="sendParent()">아이디사용</button></p>
+        </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap {
+            width: 450px;
+            margin: 0 auto;
+        }
+            #wrap h1 {
+                color: red;
+                margin-top: 50px;
+                text-align: center;
+            }
+            #wrap h3 {
+                padding: 20px;
+                margin: 10px;
+                border: 1px solid red;
+                text-align: center;
+                border-radius: 10px;
+                font-size: .9em;
+                cursor:pointer;
+            }
+    </style>
+    <script>
+        var modifyName;
+        window.onload = function () {
+            //parent와 child간의 데이터 통신
+            //parent할 일 : child 창 open()하기
+            //child 할 일 : parent에 있는 데이터를 꼭 찝어서뿌릴거 opener(parent)의 데이터를 받아 내 문서 객체에 뿌리기
+            //opener에 있는 id=name의 value값을 가지고 오는 것 
+
+            //1. opener에서 value 값 받아오기 
+            var name = opener.document.getElementById('name').value;
+            var date = opener.document.getElementById('date').value;
+            //2. child의 id=parentData 가져오기
+            var parentData = document.getElementById('parentData');
+            if (date == ''){
+                parentData.innerHTML = '넘어온 이름 : ' + name + '날짜:선택안함';
+            } else {
+            parentData.innerHTML = '넘어온 이름 : ' + name + '날짜' + date;
+            }
+            modifyName = document.getElementById('modifyName');
+            //modifyName.value = name;
+            modifyName.setAttribute('value', name);
+        };
+        function sendData(part) {
+            opener.document.getElementById('part').innerHTML = part;
+            //opener.document.getElementById('name').value = document.getElementById('modifyName').value;
+            opener.document.getElementById('name').value = modifyName.value;
+            this.close();
+        }
+    </script>
+
+</head>
+<body>
+    <div id="wrap">
+    <h1>인사정보 시스템</h1>
+    <hr />
+    <h2 id="parentData">~</h2>
+    <h2>이름 수정 가능 : <input type="text" id="modifyName" /></h2>
+    <hr/>
+    <h3 onclick="sendData('인사')">인사로 하고 닫기</h3>
+    <h3 onclick="sendData('재무')">재무로 하고 닫기</h3>
+    <h3 onclick="sendData('총무')">총무로 하고 닫기</h3>
+    <h3 onclick="sendData('개발')">개발로 하고 닫기</h3>
+    </div>
+
+
+
+
+
+    <!--
+        <div id="wrap">
+            <h1>인사정보 시스템</h1>
+            <hr  />
+            <h2 id="showName"></h2>
+            <h2>이름 수정 가능 : <input type="text" id="modifyName" /></h2>
+            <hr />
+            <h3 onclick="javascript:sendData('인사')">인사로 하고 닫기</h3>
+            <h3 onclick="javascript:sendData('재무')">재무로 하고 닫기</h3>
+            <h3 onclick="javascript:sendData('총무')">총무로 하고 닫기</h3>
+            <h3 onclick="javascript:sendData('개발')">개발로 하고 닫기</h3>
+        </div>
+        -->
+</body>
+</html>

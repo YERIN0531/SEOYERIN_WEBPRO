@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+    img{
+    display:none;
+    position:absolute;
+    }
+    </style>
+    <script>
+        
+        window.onclick = function () {
+            var p = document.getElementsByTagName('p')[0];
+            p.innerHTML = '스크린좌표 : ' + event.screenX + ',' + event.screenY + '<br>';
+            p.innerHTML += 'offset좌표 : ' + event.offsetX + ',' + event.offsetY;
+            var img = document.getElementsByTagName('img')[0];
+            img.style.display ='inline-block';
+            img.style.left = event.offsetX + 'px';
+            img.style.top = event.offsetY + 'px';
+            //포지션을 absolute img.style.
+        };
+        
+    </script>
+</head>
+<body> 
+    <p><img src="img/car.gif" /></p>
+</body>
+</html>

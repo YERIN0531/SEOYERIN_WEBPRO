@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // window가 로드 됐나 안됐나 리스너 하다가 로드됐을때 이 함수 딱 실행
+        window.onload = function () {
+            var header = document.querySelector('h1');
+            //이벤트와 이벤트리스너를 연결시켜주는 함수 
+            //(이벤트 이름, 이벤트 function)
+            header.addEventListener('click', function () {
+                alert('click');
+            });
+        }
+    </script>
+</head>
+<body>
+<h1>Click해봐</h1>
+</body>
+</html>

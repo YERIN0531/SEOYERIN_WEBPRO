@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+    table{
+    background-color:darkgreen;
+    margin : 50px auto;
+    width:500px;
+    }
+
+    td{
+    background-color : white; 
+    padding: 50px;
+    text-align:center;
+    }
+    </style>
+    <script>
+        window.onkeyup = function () {
+            //document.body.innerHTML += '눌러진 키패드의 아스키코드 : ' + event.keyCode + '<br>';
+            if (event.keyCode > 47 && event.keyCode < 57) {
+                var keyCode = (event.keyCode - 48);
+                var tds = document.getElementsByTagName('td');
+                for (idx = 0; idx < tds.length; idx++) {
+                    tds[idx].style.backgroundColor = 'white';
+
+                }
+                tds[keyCode].style.backgroundColor = 'red';
+            } else if (event.keyCode > 95 && event.keyCode < 105) {
+                var keyCode2 = (event.keyCode - 96);
+                var tds = document.getElementsByTagName('td');
+                for (idx = 0; idx < tds.length; idx++) {
+                    tds[idx].style.backgroundColor = 'white';
+                }
+
+            tds[keyCode2].style.backgroundColor = 'yellow';
+
+            }
+
+
+
+
+
+        };
+    </script>
+</head>
+<body>
+<form>
+<table>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

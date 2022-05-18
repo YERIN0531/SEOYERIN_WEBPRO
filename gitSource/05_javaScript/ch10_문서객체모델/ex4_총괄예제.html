@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+    #wrap{
+    width:300px;
+    margin: 0 auto;
+    }
+    </style>
+    <script>
+        function childOpen() {
+            var id = document.getElementById('id1').value;
+            if (!id) {
+                alert('아이디를 입력하세요');
+            } else {
+                var child = open('ex4_총괄예제child.html', '', 'width=600,height=400,left=100,top=100');
+                if (!child) {
+                    alert('팝업차단을 해제하세요');
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <!--실제로 회원 가입 할때는 이렇게 form으로 묶고 테이블로 만든뒤 type=button으로 생성
+    <form>
+        <table>
+        <tr>
+            <td>아이디</td>
+            <td><input type="text" id="id" /></td>
+            <td><input type="button"</td>
+        </tr>
+        </table>
+    </form>
+    -->
+    <div id="wrap">
+        <p>
+            아이디 <input type="text" id="id1" />
+            <button onclick="childOpen()">중복확인</button>
+        </p>
+    </div>
+</body>
+</html>

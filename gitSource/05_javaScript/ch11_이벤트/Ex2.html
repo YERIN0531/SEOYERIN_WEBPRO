@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+    img{
+    width:120px;
+    }
+    </style>
+    <script>
+        var outImg = ['img/0out.jpg', 'img/1out.jpg', 'img/2out.jpg' , 'img/3out.jpg'];
+        var inImg = ['img/0over.jpg', 'img/1over.jpg', 'img/2over.jpg', 'img/3over.jpg'];
+        function changeImg(n) {
+            var img1 = document.getElementsByTagName('img');
+            img1[n].src = inImg[n];
+        }
+        function origin(n) {
+            var img2 = document.getElementsByTagName('img');
+            img2[n].src = outImg[n];
+
+        }
+
+    </script>
+</head>
+<body>
+<img src="img/0out.jpg" onmouseover="changeImg(0)" onmouseout="origin(0)"/>
+<img src="img/1out.jpg" onmouseover="changeImg(1)" onmouseout="origin(1)"/>
+<img src="img/2out.jpg" onmouseover="changeImg(2)" onmouseout="origin(2)"/>
+<img src="img/3out.jpg" onmouseover="changeImg(3)" onmouseout="origin(3)"/>
+</body>
+</html>

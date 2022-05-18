@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            document.querySelector('form').onsubmit = function () {
+                //var pw = document.getElementById('pw')[0];
+                //var pw1 = document.getElementsByName('pw1');
+                var pw = document.getElementsByName('pw')[0];
+                var pw1 = document.querySelector('input[name="pw1"]');
+                if (pw.value != pw1.value) {
+                    alert('비밀번호를 확인하세요');
+                    pw.value = '';
+                    pw1.value = '';
+                    pw.focus();
+                    return false; //submit이 기본이벤트인데, return false는 기본값을 제한
+                                  // 디폴트 이벤트 제한
+                }
+                return true;
+                //안써줘도 됨 어차피 디폴트로 되는 거기 때문에
+            };
+        };
+    </script>
+</head>
+<body>
+<form>
+    PW : <input type="password" name="pw" id="pw" /><br/>
+    PW : <input type="password" name="pw1" /><br />
+    <input type="submit" />
+    <!--submit이벤트는 default 이벤트-->
+</form>
+</body>
+</html>
