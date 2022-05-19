@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+</head>
+<body>
+  <form action="ex6_su2ququdanout.jsp" method="get">
+   <p>단 수 : <input type="number" name="su1"> 
+   <b>단 ~</b> <input type ="number" name="su2">단까지</p>
+   <p><input type="submit" value="구구단 출력"></p>
+  
+  </form>
+</body>
+</html>

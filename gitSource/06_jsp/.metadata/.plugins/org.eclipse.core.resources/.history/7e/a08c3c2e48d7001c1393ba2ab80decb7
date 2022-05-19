@@ -1,0 +1,35 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+	td{padding:4px;}
+	p{
+	text-align: center;
+	}
+	</style>
+	
+</head>
+<body>
+	<%
+	int su1 = Integer.parseInt(request.getParameter("su1"));
+	int su2 = Integer.parseInt(request.getParameter("su2"));
+	%>
+	<h3><%=su1 %>단부터 <%=su2 %>단까지 구구단 출력</h3>
+	<table>
+	<%for(int i=1; i<=9; i++){ %>
+	<tr>
+		<%for(int j=su1; j<=su2; j++){ %>
+		<td><%=j%> X <%=i%> = <%=j*i%></td>
+		<%} %>
+	</tr>
+	<%} %>
+</table>
+<p>
+<input type="button" value="뒤로가기">
+</p>
+</body>
+</html>
