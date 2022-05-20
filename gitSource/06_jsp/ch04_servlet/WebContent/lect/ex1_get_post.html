@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+  <script>
+  </script>
+</head>
+<body>
+	<!-- 주소창에 파라미터가 있으면 get 방식  -->
+  <a href="../Ex1?id=김&pw=ppp">Ex1서블릿에게 id와 pw넘기기(GET)</a>
+  <hr>
+  <!-- onclick에 location.href를 꼭 써주고 주소를 넣기  -->
+  <button onclick="location.href ='../Ex1?id=박&pw=pp';">Ex1서블릿에게 id와 pw넘기기(GET)</button>
+  <hr>
+  <form action="/ch04_servlet/Ex1" method="get">
+  	<p>ID
+  		<input type="text" name="id" value="한">
+  	</p>
+  	<p>PW
+  		<input type="password" name="pw">
+  	</p>
+  	<p><input type="submit" value="Ex1 서블릿에게 id 와 pw 넘기기(GET)"></p>
+  </form>
+  <hr>
+  <form action="../Ex1" method="post">
+  	<p>ID
+  		<input type="text" name="id" value="한">
+  	</p>
+  	<p>PW
+  		<input type="password" name="pw" >
+  	</p>
+  	<p><input type="submit" value="Ex1 서블릿에게 id 와 pw 넘기기(POST)"></p>
+  </form>
+</body>
+</html>
