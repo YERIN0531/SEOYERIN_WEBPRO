@@ -1,0 +1,38 @@
+03.11_자바
+(변수)
+깃 집 가서 다시 세팅해서 지우고 해도 됨.
+그게 싫으면 
+코드 누르고 zip 다운로드 받아놔도 됨. 
+그것도 싫으면 
+깃주소 복사 https://github.com/YERIN0531/SEOYERIN_WEBPRO.git
+탐색기에서 c 드라이브에 cmd.
+> git clone 주소 폴더이름 (다른 pc에 git 내용 받기)
+ git pull origin main (동기화)
+
+집가서 자바 깔면 path 설정하기
+
+-변수
+소수점 없으면 무조건 정수(ex.10)/ 있으면 무조건 실수(ex.10.0)
+웬만하면 int. 22억이 넘어가면 long
+웬만하면 실수에서 double 
+
+public static void main(String[] args) {
+		//데이터타입 변수명 = 초기값
+		int i = 10; // 4byte짜리 i라는 메모리 공간에 10을 할당
+		byte j = 10; // 2byte짜리 j라는 메모리 공간에 10을 할당
+		double h = 10.15; 
+		i = 5; [이 부분은 수정할때 사용함/그럼 i는 10이 아닌 5로 수정됨]
+
+System.out.println("i="+i+"\t j="+j+"\t h="+h);
+		System.out.println("끝");
+실행할때 .. 
+\n 개행 
+
+public static void
+
+
+
+
+
+
+(연산자)

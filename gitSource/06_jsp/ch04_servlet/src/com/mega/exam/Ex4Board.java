@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/Ex3Board")
-public class Ex3Board extends HttpServlet {
+@WebServlet("/Ex3Board2")
+public class Ex4Board extends HttpServlet {
 	private static final long serialVersionUID = 1L;
       
 

@@ -1,0 +1,54 @@
+자바
+// 한줄 주석 - 설명문  (컴퓨터는 실행하지 않는 실행문)
+/*을 치면 자동으로 다음줄에 *이 생성. 여러 내용을 써야 할때 쓰거나
+프로젝트 처음 시작할때 날짜와 누가 만들었는지 보여주기 위해 작성
+// 로 쓰면 한줄만 작성됨.
+
+println(개행포함) - 한줄 띄우기
+print(개행미포함) - 옆으로 붙여 쓰기 
+
+class의 이름 즉 프로젝트의 이름을 설정할땐 앞글자가 대문자여야함
+public class Hello{
+       public static void main(String [] args) {
+               System.out.println("Hello, Java");
+               System.out.print("Welcome~");
+               System.out.print("끝");
+      }
+}
+
+프로젝트 하나를 완성하면 다음 프로젝트를 열때 기존의 프로젝트는
+close를 해주어야 섞이지 않음. 
+
+(file / New / javaproject / ch01(이름)
+Src / new/ class /패키지 지우고, 네임에 Hello / 
+Public static void main(String [] args){
+System.out.println} 
+클래스 이름이랑 자바소스 이름 동일해야해.
+
+Github / 네이버메일 / 동일비밀번호
+
+(ex) String  greeting = “안녕하세요”;
+public class VarEx01 {
+	public static void main(String[] args) {
+		int age = 28; // 우항의 26 정수값을 좌항의 age라는 곳에 담음
+		String fullName = "배수지"; // String 문자열 : 여러글자
+		System.out.println("안녕하세요? "+age+"살 "+fullName+"씨");
+		System.out.println("안녕하세요? "+age+"살 "+fullName+"씨");
+		System.out.println("안녕하세요? "+age+"살 "+fullName+"씨");
+		System.out.println("안녕하세요? "+age+"살 "+fullName+"씨");
+		System.out.println("안녕하세요? "+age+"살 "+fullName+"씨");
+	}
+}
+public class VarEx01 {
+	public static void main(String[] args) {
+		int age = 28; // 우항의 26 정수값을 좌항의 age라는 곳에 담음
+		String name = "배수지"; // String 문자열 : 여러글자
+		System.out.println("안녕하세요? "+age+"살 "+ name +"입니다");
+		System.out.println("안녕하세요? "+age+"살 "+ name +" 입니다 ");
+		System.out.println("안녕하세요? "+age+"살 "+ name +" 입니다 ");
+		System.out.println("안녕하세요? "+age+"살 "+ name +" 입니다 ");
+		System.out.println("안녕하세요? "+age+"살 "+ name +" 입니다 ");
+
+
+프로젝트를 실행할땐, 프로젝트 명에 회사 주소를 반대로 쓰면 됨.
+ex) com.lec.ex

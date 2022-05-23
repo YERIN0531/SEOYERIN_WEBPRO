@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+  <script>
+  	//함수는 queryselect만 사용 
+  	window.onload=function(){
+  		// submit 디폴트 이벤트 제한 : checkbox가 한개도 체크되어 있지 않을 때 
+  		document.querySelector('form').onsubmit= function(){
+				var hobby = document.querySelectorAll('input[name="hobby"]'); //배열
+				var cnt = 0; //체크박스가 몇개 체크 될지 저장하기 위한 변수
+				for(var i=0; i<hobby.length; i++){
+					/*if(hobby[i].checked){ //체크되어 있으면 true 안되어 있으면 false 자바스크립트는 true를 연산하려고 하면 1이 됨 false는 0
+						cnt++;
+					}*/ //이렇게 해도 되지만 
+					cnt = cnt+ hobby[i].checked;
+					
+				}//for
+					if(!cnt){ //cnt가 0이면 if문이 참일 것 
+						alert('취미를 한개 이상 선택하셔야 합니다');
+					return false;
+					}
+				return true;
+  		}; //onsubmit
+  	};//onload
+  </script>
+</head>
+<body>
+  <form action="#">
+  <p>취미
+  	<input type="checkbox" name="hobby" value="독서">독서
+  	<input type="checkbox" name="hobby" value="요리">요리
+  	<input type="checkbox" name="hobby" value="운동">운동
+  	<input type="checkbox" name="hobby" value="취침">취침
+  </p>
+  
+	<p>
+			<input type="submit">
+	</p>  
+  </form>
+</body>
+</html>
