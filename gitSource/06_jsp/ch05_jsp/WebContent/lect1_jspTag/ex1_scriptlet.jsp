@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
+//스크립트릿을 활용하여 자바코드 부분에 color라는 name을 불러와서 로직을 짜는 것 
+//파라미터를 불러와야 body안에 color에 <%=color를 사용 가능.
 	String color = request.getParameter("color");
 	if(color==null){
 		color = "white";
