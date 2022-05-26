@@ -22,18 +22,25 @@
 			cookie2.setMaxAge(-1);
 			response.addCookie(cookie2);
 			response.sendRedirect("welcome.jsp");
-			/* Cookie cookie3 = new Cookie("pw","111"); //DB에서 가져온 이름을 쿠키값으로
+			
+			/* 
+			
+			Cookie cookie3 = new Cookie("pw","111"); //DB에서 가져온 이름을 쿠키값으로
 			cookie3.setMaxAge(-1);
-			response.addCookie(cookie3); */
+			response.addCookie(cookie3); 
+			정보수정할때 패스워드를 빨리 띄울일이 없기 때문에 (회원정보수정을 빨리하고 싶다) 굳이 pw는 쿠키로 만들 필요가 없음 
+			
+			*/
+			
 		}else{
 	%>
 		<script>
 		alert('아이디와 비밀번호가 알맞지 않습니다');
 		location.href="login.html";
 		</script>
-	
-	<% 	
+	<%
 		}
 	%>
+
 </body>
 </html>
