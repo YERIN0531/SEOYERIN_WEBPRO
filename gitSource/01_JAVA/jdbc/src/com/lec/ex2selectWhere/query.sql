@@ -1,0 +1,38 @@
+-- Ex1. 사용자에게 부서번호 입력받아 부서 정보 뿌리기 
+SELECT * FROM DEPT WHERE DEPTNO=30;
+INSERT INTO DEPT VALUES (50,'IT','SEOUL');
+SELECT * FROM DEPT;
+ROLLBACK;
+
+-- Ex2. 
+    -- 1번 쿼리는 자바에 바로 넣는 것 가능 
+SELECT * FROM DEPT WHERE DEPTNO=30;
+    --해당부서번호 사원의 정보(사번, 이름, 급여, 상사명)
+    -- 2번 쿼리는 그대로 자바에 넣으면 안됨 (ENAME이 두개니까)
+    -- ALIAS 꼭 주고 자바에 넣자 
+SELECT W.EMPNO, W.ENAME, W.SAL, M.ENAME MANAGER FROM EMP W, EMP M 
+WHERE W.MGR = M.EMPNO AND W.DEPTNO=30;
+
+--Ex3. 
+    -- 사용자에게 DNAME 을 받아서 정보를 출력 (SCANNER 부분)
+SELECT * FROM DEPT WHERE DNAME = UPPER('SALES'); -- 자바에 옮길때 소문자로 쓰니, UPPER 을 써주기 
+
+    -- 사번, 이름, 급여, 급여등급 (출력 부분) 
+SELECT EMPNO, ENAME, SAL, GRADE 
+    FROM EMP E, SALGRADE, DEPT D
+    WHERE SAL BETWEEN LOSAL AND HISAL AND E.DEPTNO=D.DEPTNO AND DNAME = UPPER('SALES') ;
+
+SELECT EMPNO, ENAME, SAL, GRADE
+FROM EMP, SALGRADE
+WHERE SAL BETWEEN LOSAL AND HISAL 
+AND DEPTNO=(SELECT DEPTNO FROM DEPT WHERE DNAME = UPPER('SALES'));
+
+
+
+
+
+
+
+
+
+
