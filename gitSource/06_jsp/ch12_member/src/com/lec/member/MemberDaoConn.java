@@ -1,8 +1,8 @@
 package com.lec.member;
 
 import java.sql.Connection;
+
 import java.sql.Date;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -13,7 +13,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-public class MemberDao {
+public class MemberDaoConn {
 
 	public static final int SUCCESS = 1; //회원가입, 정보 수정시 성공 리턴값
 	public static final int FAIL 	= 0; //회원가입, 정보 수정시 실패 리턴값
@@ -23,26 +23,26 @@ public class MemberDao {
 	public static final int LOGIN_FAIL_ID = -1; // 로그인 오류(ID오류)
 	public static final int LOGIN_FAIL_PW = 0;  // 로그인 오류(PW오류) 
 
-	//싱글톤
-	private static MemberDao instance; //자기가 자기 클래스 참조 
-	public static MemberDao getInstance() {
-		if(instance==null) {
-			instance= new MemberDao();
-		}
-		return instance;
-	}
 	
-	private MemberDao() {} //이걸 안쓰면 외부에서 new 해버릴 수 있어서 생성자 만든 것 
-	
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
 	// conn 객체 리턴하는 함수 
-	private static Connection getConnection() throws Exception{
-		Class.forName("oracle.jdbc.driver.OracleDriver");
-		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","scott","tiger");
+	private static Connection getConnection() throws SQLException{
+		// 커넥션 객체를 생성하는게 아니라, 커넥션 풀에 있는 DataSource안의 conn객체 이용
+		// 리턴변수 만들어 놓기 
+		Connection conn = null; 
+		// 커넥션 풀에 있는 데이터 소스를 가지고오고 커넥션 객체를 가져와야함 
+		// 데이터 소스로 매핑되어 있는 커넥션 객체 필요 
+		 try {
+			// 데이터 소스 가져오기 - Context : 컨텍스트 풀에 있는 애 하나 가져와 
+			Context ctx = new InitialContext();//Context 임폴트 : java.naming
+			//ctx라는 객체를 통해 소스 가져올 것 
+			DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/Oracle11g"); // 얘 리턴 타입은 object임
+			//conn객체 가져오기 
+			conn = ds.getConnection(); // 가지고는 왔는데, 내가 drivername,password등을잘못 쳤을수도 있음 thorow 혹은 try-catch해줘야됨
+		} catch (NamingException e) {
+			System.out.println("커넥션풀이름 오류 : " + e.getMessage());
+		} 
 		return conn;
 	}
-	
-	
 	//1. 회원가입시 ID 중복 체크를 위한 SQL : public int confirmID(String id)
 	public int confirmID(String id) {
 		int result =MEMBER_EXISTENT;
