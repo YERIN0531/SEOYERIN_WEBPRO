@@ -49,9 +49,11 @@
 				/************************************************************************/	
 				//답변글 들여쓰기 여부 먼저 해주기 - 들여쓴다는 건? re.gif출력 -- 들여쓰기 만큰 width잡아주기/****************************//****************************/
 			if(dto.getRe_indent()>0){
-				int width = dto.getRe_indent()*20;
+				int width = (dto.getRe_indent()-1)*10; //-1해주는 이유 : 첫번째 답변글은 들여쓰기 하고싶지않아서 ! 
+				// <img src='../img/level.gif' width =width height='10'> 들여쓰기 공간 확보
 				// <img src = '../img/re.gif' width=width, height='10'>--들여쓰기 정도를 알기 위해선 width만큼 
-				out.println("<img src='../img/re.gif' width='"+width+"' height ='10'>");
+				out.println("<img src='../img/level.gif' width='"+width+"' height ='10'>"); //들여쓰기 공간확보
+				out.println("<img src = '../img/re.gif'>");
 			}
 			/************************************************************************/	
 			

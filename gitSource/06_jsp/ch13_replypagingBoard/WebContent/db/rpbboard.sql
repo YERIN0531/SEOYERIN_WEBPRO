@@ -74,16 +74,43 @@ SELECT * FROM (SELECT ROWNUM RN, A.* FROM (SELECT * FROM BOARD ORDER BY REF DESC
 WHERE RN BETWEEN 11 AND 20;
 
 -------------------------------------------------------------------------------
---9
+--9. 답변글 처리
 
+--9. 원글 150번 글 입력 : 글번호와 REF가 같고, RE_STEP=0, RE_INDENT=0
+INSERT INTO BOARD (NUM, WRITER, SUBJECT, CONTENT, EMAIL, PW, REF, RE_STEP, RE_INDENT, IP)
+    VALUES (150, '원글자','글150','본문','KOK@W.COM','1',
+                    150, 0, 0, '192.168.1.1');
+-- 답변글 저장전 해야할 STEP(엑셀의 ⓐ STEP)
+UPDATE BOARD SET RE_STEP = RE_STEP+1 WHERE REF=150 AND RE_STEP>0;
+SELECT * FROM BOARD WHERE NUM=151;
+--150번글의 첫번째 답변글
+INSERT INTO BOARD (NUM, WRITER, SUBJECT, CONTENT, EMAIL, PW, REF, RE_STEP, RE_INDENT, IP)
+    VALUES (151, '답변자', '글150-1', '본문', 'WOW@.COM','1',
+                    150, 1, 1, '192.168.1.12');
 
+-- 답변글 저장전 해야할 STEP(엑셀의 ⓐ STEP)
+UPDATE BOARD SET RE_STEP = RE_STEP+1 WHERE REF=150 AND RE_STEP>0;
+SELECT * FROM BOARD WHERE NUM=151;
+--150번글의 두번째 답변글
+INSERT INTO BOARD (NUM, WRITER, SUBJECT, CONTENT, EMAIL, PW, REF, RE_STEP, RE_INDENT, IP)
+    VALUES (152, '답변자2', '글150-2', '본문', 'WOW@.COM','1',
+                    150, 1, 1, '192.168.1.12');
+                    
+SELECT * FROM BOARD ORDER BY REF DESC, RE_STEP;
+COMMIT;
 
+ROLLBACK;
+--152번의 답변글 
+SELECT * FROM BOARD WHERE NUM=152; -- 원글이 152번이다 라고 생각하고 쓰기 
+    -- A스텝 
+    -- 151번과 152사이에 답변글이 끼어들게 되면서 151번이 하나 밑으로 떨어지게 됨 
+    UPDATE BOARD SET RE_STEP = RE_STEP+1 WHERE REF=150 AND RE_STEP>1;
+    -- 152번의 답변글 : 원글 152번의 REF, RE_STEP+1, RE_INDENT+1
+    INSERT INTO BOARD (NUM, WRITER, SUBJECT, CONTENT, EMAIL, PW, REF, RE_STEP, RE_INDENT, IP)
+    VALUES (153, '답답자', '글152-1', '본문', NULL,'1',
+                    150, 2, 2, '192.168.1.12');
 
-
-
-
-
-
+COMMIT;
 
 
 
