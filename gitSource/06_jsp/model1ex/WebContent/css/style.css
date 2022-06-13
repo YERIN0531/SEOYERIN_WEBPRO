@@ -13,6 +13,8 @@
 #content_form input:not(.btn), #content_form textarea {
 	width: 90%;
 }
+#content_form input {height: 20px; padding:3px; margin: 10px 0;}
+#content_form .btn {height: 30px; padding:3px; margin: 5px 0;}
 #content_form{
 	width:1000px; margin: 0px auto; height: 500px; 
 	text-align: center;

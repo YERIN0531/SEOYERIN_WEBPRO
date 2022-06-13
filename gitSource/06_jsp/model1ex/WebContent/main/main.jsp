@@ -54,7 +54,7 @@
 			if(i==currentPage){
 				out.println("<b>["+i+"]</b>");
 			}else{ 
-				out.println("[<a href='main.jsp?pageNum="+i+"'>"+i+"</a>]");
+				out.println("[<a href='"+conPath+"/main/main.jsp?pageNum="+i+"'>"+i+"</a>]");
 			}
 		}
 			if(endPage < pageCnt){

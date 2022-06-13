@@ -6,11 +6,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
-	<link href="<%=conPath%>/css/style.css" rel="stylesheet">
+	<link href="<%=conPath%>/css/bookstyle.css" rel="stylesheet">
 </head>
 <body>
+
+	<jsp:include page="../main/header.jsp"/>
+	
 	<!-- 빈태그 안쓸거라 input name과 필드명 일치 안해도 됨 -->
-	<form action="ex2_bookRegisterPro.jsp" method="post" enctype="multipart/form-data">
+	<form action="bookRegisterPro.jsp" method="post" enctype="multipart/form-data">
 		<table>
 			<caption><strong>책 등 록</strong></caption>
 			<tr>
@@ -53,5 +56,8 @@
 			</tr>
 		</table>
 	</form>	
+	
+	<jsp:include page="../main/footer.jsp"/>
+	
 </body>
 </html>

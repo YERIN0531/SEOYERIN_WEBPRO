@@ -220,7 +220,10 @@ public class FileboardDao {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "SELECT * FROM FILEBOARD WHERE FNUM=?";
+		/* String sql = "SELECT * FROM FILEBOARD WHERE FNUM=?";
+		 * 얘쓰면 cname과 ceamil을 못가지고 와서 쿼리 수정 
+		 *  */
+		String sql = "SELECT F.*, CNAME, CEMAIL FROM FILEBOARD F, CUSTOMER C WHERE F.CID=C.CID AND FNUM=?";
 		try {
 			conn = getConnection();
 			pstmt = conn.prepareStatement(sql);
