@@ -11,12 +11,8 @@
 	<link href="${conPath }/css/style.css" rel="stylesheet">
 </head>
 <body>
-<!-- 	<form action="ex09_visitNum.jsp"> -->
-<!-- 	choose문은 잘 안씀 if를 더 많이 씀  -->
-	<form action="ex11_visitNumChoose.jsp"> 
-		방문횟수
-		<input type="number" name="visitNum" required="required">
-		<input type="submit">
-	</form>
+	<!-- 이 프로젝트를 만들거에요 라고 선언하기 위해 index.jsp하는 건데, 선언 안해도 상관 없음 -->
+	<h1><a href="${conPath }/emplist">empList</a></h1>
+	<h1><a href="${conPath }/empSch">empSch</a></h1>
 </body>
 </html>
