@@ -122,7 +122,7 @@ public class BoardDao {
 			pstmt.setString(4, bip);
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
-			System.out.println(e.getMessage());
+			System.out.println(e.getMessage() + "원글쓰기 에러");
 		}finally {
 			try {
 				if(pstmt!=null)pstmt.close();
@@ -284,8 +284,8 @@ public class BoardDao {
 			pstmt.setString(2, btitle);
 			pstmt.setString(3, bcontent);
 			pstmt.setInt(4, bgroup);
-			pstmt.setInt(5, bstep);
-			pstmt.setInt(6, bindent);
+			pstmt.setInt(5, bstep+1);
+			pstmt.setInt(6, bindent+1);
 			pstmt.setString(7, bip);
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
