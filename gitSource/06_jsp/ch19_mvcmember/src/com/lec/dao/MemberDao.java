@@ -221,9 +221,10 @@ public class MemberDao {
 			PreparedStatement pstmt = null;
 			String sql = "UPDATE MVC_MEMBER SET MPW=?," + 
 					"                      MNAME=?," + 
-					"                      MEMAIL=?," + 
+					"                      MEMAIL=?," +
 					"                      MBIRTH=?," + 
-					"                      MADDRESS=?" + 
+					"                      MADDRESS=?," + 
+					"                      MPHOTO=?" +
 					"                      WHERE MID = ?";
 			try {
 				conn = getConnection();
@@ -233,7 +234,8 @@ public class MemberDao {
 				pstmt.setString(3, dto.getMemail());
 				pstmt.setDate(4, dto.getMbirth());
 				pstmt.setString(5, dto.getMaddress());
-				pstmt.setString(6, dto.getMid());
+				pstmt.setString(6, dto.getMphoto());
+				pstmt.setString(7, dto.getMid());
 				result = pstmt.executeUpdate();
 				
 			} catch (SQLException e) {

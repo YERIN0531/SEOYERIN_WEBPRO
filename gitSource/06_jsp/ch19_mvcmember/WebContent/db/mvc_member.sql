@@ -5,7 +5,7 @@ CREATE TABLE MVC_MEMBER(
     MPW      VARCHAR2(30) NOT NULL,
     MNAME    VARCHAR2(30) NOT NULL,
     MEMAIL   VARCHAR2(30) ,
-    MPHOTO   VARCHAR2(30) NOT NULL,     -- 회원가입시 사진 업로드를 안할시 기본 이미지로(NOIMG.JPG)
+    MPHOTO   VARCHAR2(30) NOT NULL,          -- 회원가입시 사진 업로드를 안할시 기본 이미지로(NOIMG.JPG)
     MBIRTH   DATE,
     MADDRESS VARCHAR2(300),
     MRDATE   DATE DEFAULT SYSDATE NOT NULL
@@ -55,7 +55,8 @@ UPDATE MVC_MEMBER SET MPW='111',
                       MNAME='강예린',
                       MEMAIL='kang@com',
                       MBIRTH='1999-12-12',
-                      MADDRESS='부산'
+                      MADDRESS='부산',
+                      MPHOTO='100.jpg'
                       WHERE MID = 'bbb';
                       
                       
@@ -88,6 +89,35 @@ INSERT INTO MVC_MEMBER (mID, mPw, mName, mEmail, mPhoto, mBirth, mAddress)
     VALUES ('ham','1','함소원','ham@naver.com','ham.jpg','1976/06/16','서울시');
 INSERT INTO MVC_MEMBER (mID, mPw, mName, mEmail, mPhoto, mBirth, mAddress)
     VALUES ('han','1','한지민','han@naver.com','han.jpg','1982/11/05','서울시');
+    
+    INSERT INTO MVC_MEMBER (MID, MPW, MNAME, MEMAIL, MPHOTO, MBIRTH, MADDRESS)
+    VALUES ('jang','1','장동건',null,'jang.jpg',null,null);
+INSERT INTO MVC_MEMBER (MID, MPW, MNAME, MEMAIL, MPHOTO, MBIRTH, MADDRESS)
+    VALUES ('jo','1','조현우',null,'jo.jpg',null,null);
+INSERT INTO MVC_MEMBER (MID, MPW, MNAME, MEMAIL, MPHOTO, MBIRTH, MADDRESS)
+    VALUES ('kang','1','강동원',null,'kang.jpg',null,null);
+INSERT INTO MVC_MEMBER (MID, MPW, MNAME, MEMAIL, MPHOTO, MBIRTH, MADDRESS)
+    VALUES ('kim','1','김태희',null,'kim.jpg',null,null);
+INSERT INTO MVC_MEMBER (MID, MPW, MNAME, MEMAIL, MPHOTO, MBIRTH, MADDRESS)
+    VALUES ('lee','1','이선빈',null,'lee.jpg',null,null);
+INSERT INTO MVC_MEMBER (MID, MPW, MNAME, MEMAIL, MPHOTO, MBIRTH, MADDRESS)
+    VALUES ('lim','1','임요한',null,'lim.jpg',null,null);
+INSERT INTO MVC_MEMBER (MID, MPW, MNAME, MEMAIL, MPHOTO, MBIRTH, MADDRESS)
+    VALUES ('park','1','박보검',null,'park.jpg',null,null);
+INSERT INTO MVC_MEMBER (MID, MPW, MNAME, MEMAIL, MPHOTO, MBIRTH, MADDRESS)
+    VALUES ('rain','1','비',null,'rain.jpg',null,null);
+INSERT INTO MVC_MEMBER (MID, MPW, MNAME, MEMAIL, MPHOTO, MBIRTH, MADDRESS)
+    VALUES ('s','1','송가연',null,'s.jpg',null,null);
+INSERT INTO MVC_MEMBER (MID, MPW, MNAME, MEMAIL, MPHOTO, MBIRTH, MADDRESS)
+    VALUES ('son','1','손흥민',null,'son.jpg',null,null);
+INSERT INTO MVC_MEMBER (MID, MPW, MNAME, MEMAIL, MPHOTO, MBIRTH, MADDRESS)
+    VALUES ('song','1','송중기',null,'song.jpg',null,null);
+INSERT INTO MVC_MEMBER (MID, MPW, MNAME, MEMAIL, MPHOTO, MBIRTH, MADDRESS)
+    VALUES ('song2','1','송혜교',null,'song2.jpg',null,null);
+    
+SELECT * FROM MVC_MEMBER;
+COMMIT;
+    
 -- dao에 들어갈 query
 -- (1) 로그인
 SELECT * FROM MVC_MEMBER WHERE mID='ham' and mPW='1';
@@ -105,6 +135,7 @@ UPDATE MVC_MEMBER SET mPw = '1',
                     mPhoto = 'NOIMG.JPG',
                     mBirth = '1991/12/12',
                     mAddress = '서울'
+                
         WHERE mId='ham';
         
 -- (6) 회원리스트(top-N구문)
@@ -114,6 +145,7 @@ SELECT * FROM (SELECT ROWNUM RN, A.* FROM
 -- (7) 회원수
 SELECT COUNT(*) cnt FROM MVC_MEMBER;
 COMMIT;
+SELECT * FROM MVC_MEMBER;
 
 
 
