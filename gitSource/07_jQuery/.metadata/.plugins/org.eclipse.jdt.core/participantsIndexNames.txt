@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+D:\webPro\SOURCE\07_jQuery\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\931054857.index
+\jq02_ui\src

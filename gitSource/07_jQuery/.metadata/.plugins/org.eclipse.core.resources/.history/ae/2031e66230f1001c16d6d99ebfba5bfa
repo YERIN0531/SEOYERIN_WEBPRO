@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+table td{width:100px; height:100px; background-color: #AAFFAA;}
+	.tdRed{background-color: red;}
+img{width:100px; height: 100px;}
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+ $(document).ready(function(){
+	 var ddukIdx = parseInt(Math.random()*9);
+	
+	 $('td').each(function(idx, item){
+		 $(this).click(function(){// 이렇게 하면 0번째 따로, 1번째 따로함수를 걸거라는 뜻
+		if(idx==ddukIdx){
+			$(this).css('background-image',"img/dduk.jpg");
+		
+		}
+		 $('td').removeClass('tdRed');
+		 $(this).addClass('tdRed');	
+			
+		 });  
+	 });
+	 
+
+	 
+
+ });
+ </script>
+</head>
+<body>
+<table>
+	<caption>떡이 있는 곳을 맞춰봐</caption>
+	<tr><td></td><td></td><td></td></tr>
+	<tr><td></td><td></td><td></td></tr>
+	<tr><td></td><td></td><td></td></tr>
+	
+
+	</table>
+</body>
+</html>

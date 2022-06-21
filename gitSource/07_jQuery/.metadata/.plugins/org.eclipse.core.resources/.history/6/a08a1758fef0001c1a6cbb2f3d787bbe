@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+   $(document).ready(function(){
+      $('p').click(function(){
+    	  $(this).hide(); //p태그 3개중에 클릭한 내 자신(this)를hide 숨겨라   
+      });
+      
+      $('button#hideP1').click(function(){
+    	$('#p1').hide();  
+    	  
+      });
+      
+      $('button#hidePtag').click(function(){
+    	  $('p').hide();
+      });
+      $('button#howPtag').clcik(function(){
+    	  $('p').show();
+      });
+      
+   });
+</script>
+
+</head>
+<body>
+<h1>이곳은 head</h1>
+<p>이 p태그를 클립하면 숨겨져요</p>
+<p>이 p태그를 클립하면 숨겨져요</p>
+<p id="p1">요거 p1 하나만도 숨겨져요 </p>
+
+<button id="hideP1">p1하나만 숨겨요</button>
+<button id="hidePtag">p태그를 다 숨겨요</button>
+<button id="showPtag">p태그를 다 나타내요</button>
+</body>
+</html>

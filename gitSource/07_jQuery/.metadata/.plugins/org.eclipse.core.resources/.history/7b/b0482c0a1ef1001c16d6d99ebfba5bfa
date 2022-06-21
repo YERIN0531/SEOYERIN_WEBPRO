@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.red {color:red;}
+	.blue{color:blue;}
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+ $(document).ready(function(){
+	 var h1HitCnt = 0; //h1의 hit 수 갖고 있기 
+	 $('#h2').click(function(){
+		 $(this).prepend('<b class="red">♡</b>');
+		 $(this).append('<b class="blue">♡</b>');
+	 });
+	
+	 $('#h1').click(function(){
+		h1HitCnt ++;
+		if(h1HitCnt < 6){
+			$(this).prepend('<span class="red">♧</span>');
+			$(this).apend('<span class="blue">♧</span>');
+		}
+	 });
+	 
+ });
+ </script>
+</head>
+<body>
+	<h1 id="h1">정임</h1>
+	<h1 id="h2">절림</h1>
+</body>
+</html>

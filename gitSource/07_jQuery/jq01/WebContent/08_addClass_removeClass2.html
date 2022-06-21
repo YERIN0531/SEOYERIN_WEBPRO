@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	table td{width:100px; height:100px; background-color: #AAFFAA;}
+	.tdRed{background-color: red;}
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+//  on 이라는 아이는 어떤 함수가 있는데? 하고 보는 아이 
+ $(document).ready(function(){
+	 $('td').each(function(idx, item){
+		 $(this).click(function(){// 이렇게 하면 0번째 따로, 1번째 따로함수를 걸거라는 뜻
+			 alert(idx + '번째 선택하셨군요');
+		 $('td').removeClass('tdRed');
+		 $(this).addClass('tdRed');
+		 });  
+	 });
+	 
+	 
+// 	 $('td').on('click', function(){
+// 		$('td').removeClass('tdRed'); // 클릭한 순간 모든 td들 #AAFFAA 원상복구
+// 		$(this).addClass('tdRed');
+// 		var no = $(this).attr('id'); // 내가 클릭한 곳의 id 속성을 가지고 와라
+// 		alert(no + '번째를 선택하셨군');
+// 	 });
+
+
+ });
+ </script>
+</head>
+<body>
+	<table>
+
+	<tr><td></td><td></td></tr>
+	<tr><td></td><td></td></tr>
+	
+
+	</table>
+</body>
+</html>

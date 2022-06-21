@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.red {color:red;}
+	.blue{color:blue;}
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+ $(document).ready(function(){
+	 var h1HitCnt = 0; //h1의 hit 수 갖고 있기 
+	 $('#h2').click(function(){
+		 $(this).prepend('<b class="red">♡</b>');
+		 $(this).append('<b class="blue">♡</b>');
+	 });
+	
+	 $('#h1').click(function(){
+		h1HitCnt ++;
+		if(h1HitCnt < 6){
+			$(this).prepend('<span class="red">♧</span>');
+			$(this).append('<span class="blue">♧</span>');
+		}else{// 클릭한 횟수가 6회가 되면 else로 빠져 이벤트를 제거 할 것 
+			$('#h1').off(); 
+		}
+	 }); // #h1 이벤트
+	 setInterval(function(){ // 첫번째 있는 h1 원 태그 강제로 click 되게끔 이벤트 설정 한 것
+		 $('h1').first().trigger('click'); // 강제 이벤트 발생 
+	 }, 2000);
+		
+	 
+ });
+ </script>
+</head>
+<body>
+	<h1 id="h1">정임</h1>
+	<h1 id="h2">절림</h1>
+</body>
+</html>

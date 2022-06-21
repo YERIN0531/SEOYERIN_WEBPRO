@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	table td{width:100px; height:100px; background-color: #AAFFAA;}
+	.tdRed{background-color: red;}
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+//  on 이라는 아이는 어떤 함수가 있는데? 하고 보는 아이 
+ $(document).ready(function(){
+	 $('td').on('click', function(){
+		$('td').removeClass('tdRed'); // 클릭한 순간 모든 td들 #AAFFAA 원상복구
+		$(this).addClass('tdRed');
+	 });
+ });
+ </script>
+</head>
+<body>
+	<table>
+	<!-- class에 스페이스가 들어가면 아래는 클래스 name이 3개인 것  -->
+<!-- 	<tr><td class="tdRed title s"></td><td></td></tr> -->
+	
+	<tr><td class="tdRed"></td><td></td></tr>
+	<tr><td></td><td></td></tr>
+
+	<tr><td id="0"></td><td id="1"></td></tr>
+	<tr><td id="2"></td><td id="3"></td></tr>
+	
+
+	</table>
+</body>
+</html>

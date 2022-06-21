@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+ $(document).ready(function(){
+	 //tr을 클릭하면 tr의 자식들 중 eq(0)번쨰 아이의 텍스트를 가지고 오게끔 
+	$('tr').click(function(){// html로 가져오든 text로 가져오든 지금 같은 경우엔 상관없음
+		var no = $(this).children().eq(0).text();
+// 	alert(no);
+	if(!isNaN(Number(no))){
+		location.href='03_toggle.html?no='+no; 
+	}
+	
+	});
+ });
+</script>
+</head>
+<body>
+	<table>
+		<tr><th>글번호</th><th>글제목</th><th>글쓴이</th><th>조회수</th></tr>
+		<tr><th>1</th><th>윤정임</th><th>서예린</th><th>44</th></tr>
+		<tr><th>2</th><th>오동준</th><th>최진영</th><th>20</th></tr>
+		<tr><th>3</th><th>김빈</th><th>유대환</th><th>22</th></tr>
+		<tr><th>4</th><th>콩들의하루</th><th>서예린</th><th>2</th></tr>
+	</table>
+</body>
+</html>

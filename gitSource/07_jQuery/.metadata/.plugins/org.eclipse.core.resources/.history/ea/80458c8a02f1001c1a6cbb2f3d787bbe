@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+ $(document).ready(function(){
+	 $('#msg')
+	 
+ });
+</script>
+
+</head>
+<body>
+	<p id="msg"></p>
+	<p>메세지<input type="text" name="msg"></p>
+</body>
+</html>

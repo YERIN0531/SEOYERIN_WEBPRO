@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Tue Jun 21 18:12:44 KST 2022
+org.eclipse.jst.jee.server\:jq01=D\:\\webPro\\IDE\\apache-tomcat-9.0.63\\wtpwebapps\\jq01
+org.eclipse.jst.jee.server\:jq02_ui=D\:\\webPro\\IDE\\apache-tomcat-9.0.63\\wtpwebapps\\jq02_ui

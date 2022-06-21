@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+ $(document).ready(function(){
+	 $('#msg').html('<b>Hello, jQuery</b>'); //얘는 <b>가 먹히고 출력됨 
+// 	 $('#msg').text('<b>Hello, jQuery</b>'); //얘는 <b>까지 다 출력됨 
+	 var msg = $('#msg').html(); //msg = <b>Hello, jQuery</b>
+	 alert(msg);
+ });
+</script>
+
+</head>
+<body>
+	<p id="msg"></p>
+	<p>메세지<input type="text" name="msg"></p>
+</body>
+</html>

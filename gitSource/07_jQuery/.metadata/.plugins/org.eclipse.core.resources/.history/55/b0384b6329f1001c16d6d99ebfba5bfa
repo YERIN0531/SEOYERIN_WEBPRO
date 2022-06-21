@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style></style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+ $(document).ready(function(){
+	 $('img').mouseover(function(){
+		 // over된 img의 src : img/?out.jap => src를 img/?over.jpg 
+		 // 배열 써주기 
+		 //마우스 오버한 내 자신의 attr 를 this
+		  var idx = $(this).attr('src
+				  ').substring(4,5); // 4번째부터 5번째 앞까지 
+		  $(this).attr('src', 'img/'+idx+'over.jpg');
+	 });
+	 
+		  $('img').mouseout(function(){
+				 // over된 img의 src : img/?out.jap => src를 img/?over.jpg 
+				 // 배열 써주기 
+				 //마우스 오버한 내 자신의 attr 를 this
+				  var idx = $(this).attr('src
+						  ').substring(4,5); // 4번째부터 5번째 앞까지 
+				  $(this).attr('src', 'img/'+idx+'out.jpg');
+			 });
+	 
+	 
+ });
+ </script>
+</head>
+<body>
+	<img src="img/0out.jpg">
+	<img src="img/1out.jpg">
+	<img src="img/2out.jpg">
+	<img src="img/3out.jpg">
+</body>
+</html>

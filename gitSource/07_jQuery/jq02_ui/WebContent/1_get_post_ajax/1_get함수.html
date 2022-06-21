@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style></style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+ $(document).ready(function(){
+	 $('button').click(function(){ // idConfirm.jsp?mId=aaa
+		 var mId = $('#mid').val();
+
+	 // 	 get 앞에는 요청경로를 써줘야 하고, 두번째 매개변수에는 콜백함수를 써줘야됨
+		/*
+		$.get(요청경로, callback(data, status){
+			data : 요청경로의 수행 결과 
+			status : success / fail 
+		});
+		*/
+	 	$.get('idConfirm.jsp?mid=' + mId, function(data, status){
+	 		//status 가 success면 데이터를 result 안에 넣어라 
+	 		if(status=='success'){
+	 			$('#result').html(data);
+	 		}
+	 	});
+	 }); // 버튼의 click 이벤트
+	 $('#mid').keyup(function(){
+		 var mid = $('#mid').val();
+		 if(mid.length<2){
+			 $('#result').html('id는 2글자 이상입니다');
+		 }else{
+			 $.get('idConfirm.jsp?mid='+mid, function(data, status){
+				 if(status=='success'){
+					 $('#result').html(data);
+				 }
+			 });
+		 }
+	 });
+ });
+ </script>
+</head>
+<body>
+	<p> 예린아 그만 먹어
+	아이디 <input type="text" name="mid" id="mid">
+	<button>중복체크</button>
+	</p>
+	<span id="result"></span>
+</body>
+</html>

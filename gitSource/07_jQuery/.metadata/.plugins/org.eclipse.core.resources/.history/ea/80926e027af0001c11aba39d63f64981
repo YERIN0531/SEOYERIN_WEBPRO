@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="js/"jquery-3.6.0.js"></script>
+<script>
+	//j쿼리를 쓰려면 꼭 아래처럼 써야함
+	$(document).read(function(){//window.onload랑 비슷한 맥락
+	 	//function 안에다가 j쿼리 문법들이 쭉 들어가면 됨 	
+		//$('#p1') = document.getElement 한거랑 동일 
+	 	$('#p1').click(function(){});
+	});  
+	
+	window.onload = function(){
+		// 자바스크립트 소스 
+	};
+	
+</script>
+</head>
+<body>
+	<p id="p1">p태그 하나</p>
+</body>
+</html>

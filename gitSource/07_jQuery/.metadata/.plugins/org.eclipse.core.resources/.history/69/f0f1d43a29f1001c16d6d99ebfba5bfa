@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style></style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+ $(document).ready(function(){
+	 $('img').mouseover(function(){
+		 // over된 img의 src : img/?out.jap
+		 $(this).attr('src','img/0over.jpg');
+		 $(this).attr('src','img/1over.jpg');
+		 $(this).attr('src','img/2over.jpg');
+		 $(this).attr('src','img/3over.jpg');
+		 
+	 });
+ });
+ </script>
+</head>
+<body>
+	<img src="img/0out.jpg">
+	<img src="img/1out.jpg">
+	<img src="img/2out.jpg">
+	<img src="img/3out.jpg">
+</body>
+</html>

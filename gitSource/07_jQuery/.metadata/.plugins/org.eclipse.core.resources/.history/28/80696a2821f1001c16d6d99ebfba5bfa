@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+p:last-child {
+	padding-left:20px;
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+ $(document).ready(function(){
+	 
+ });
+ </script>
+</head>
+<body>
+<form>
+	<p>ID<input type="text" name="id"></p>
+	<p>PW<input type="text" name="pw"></p>
+	<p>PW<input type="text" name="pwChk"></p>
+	<p class="result"></p>
+</form>
+</body>
+</html>

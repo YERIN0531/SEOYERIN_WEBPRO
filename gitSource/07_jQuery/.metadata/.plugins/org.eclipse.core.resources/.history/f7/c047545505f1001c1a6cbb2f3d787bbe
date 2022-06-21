@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+ $(document).ready(function(){
+	 $('tr:even').css('background-color','gray'); //0번째부터 시작 //even : 짝수번째 
+	 $('tr:odd').css('backgroundColor','#FFFFAA'); //odd 홀수번쨰 
+	 $('tr:nth-child(3n)').css('color','red'); //1부터 시작 
+ });
+</script>
+</head>
+<body>
+	<table>
+		<tr><th>글번호</th><th>글제목</th><th>글쓴이</th><th>조회수</th></tr>
+		<tr><th>4</th><th>윤정임</th><th>서예린</th><th>44</th></tr>
+		<tr><th>3</th><th>오동준</th><th>최진영</th><th>20</th></tr>
+		<tr><th>2</th><th>김빈</th><th>유대환</th><th>22</th></tr>
+		<tr><th>1</th><th>콩들의하루</th><th>서예린</th><th>2</th></tr>
+	</table>
+</body>
+</html>

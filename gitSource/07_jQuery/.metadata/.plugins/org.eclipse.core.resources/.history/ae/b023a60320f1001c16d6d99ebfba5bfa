@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style></style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+ $(document).ready(function(){
+	 $('h1').click(function(){
+		 $(this).append('<b>♥</b>').prepend('<b>♥</b>').css('color','green');
+		 $(this).off();
+	 });
+ });
+ </script>
+</head>
+<body>
+<h1>빈이 좋아요는 한번만</h1>
+<h1>진영이 좋아요도 한번만</h1>
+</body>
+</html>

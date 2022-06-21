@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style></style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+ $(document).ready(function(){
+	 
+ });
+ </script>
+</head>
+<body>
+	<p>
+	아이디 <input type="text" name="mId" id="mId">
+	<button>중복체크</button>
+	</p>
+	<span id="result"></span>
+</body>
+</html>
