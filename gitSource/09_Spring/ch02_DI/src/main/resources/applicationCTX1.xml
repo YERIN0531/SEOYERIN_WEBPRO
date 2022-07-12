@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 1) -->
+	<bean id="calculator" class="com.lec.ch02.ex1_cal.Calculator"/>
+	
+	<!-- 2) -->
+	<bean id="myCalculator" class="com.lec.ch02.ex1_cal.MyCalculator">
+	<!-- 3) -->	
+		<property name="calculator">
+			<ref bean="calculator"></ref> <!-- 객체 데이터 타입(참조 데이터 타입) -->
+		</property>
+	<!-- 4) -->
+		<property name="num1">
+			<value>50</value> <!--기초 데이터 타입 , String -->
+		</property>
+		<property name="num2" value="10"/>
+		
+	</bean>
+</beans>

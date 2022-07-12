@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- Bicycle 은 vehicle에서 상속받았기 때문에 vh는 Bicycle일수도 vehihcle일수도 있다 -->
+
+<!-- <bean id="vh" class="com.lec.ch02.ex4_vehicle.Bicycle"/> -->
+<!-- <bean id="vh" class="com.lec.ch02.ex4_vehicle.Car"/> -->
+<!-- <bean id="vh" class="com.lec.ch02.ex4_vehicle.Airplane"/> -->
+	<bean id="vh" class="com.lec.ch02.ex4_vehicle.VehicleImpl">
+		<property name="vehicle" value="제트기"/>
+		<property name="speed" value="10000"/>
+	</bean>
+</beans>

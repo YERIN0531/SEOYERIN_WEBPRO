@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean name="bmiCalculator" class="com.lec.ch02.ex2_bmi.BMICalculator">
+		<property name="lowWeight" value="18.5"/> <!-- 기초데이터 타입, String 만 value에 사용 가능 나머지는 ref태그 안에 써야됨  -->
+		<property name="normal" value="23"/>
+		<property name="overWeight" value="25"/>
+		<property name="obesity" value="30"/>
+	</bean>
+	<bean name="myinfo" class="com.lec.ch02.ex2_bmi.MyInfro">
+		<property name="name" value="홍길동"/>
+		<property name="height" value="175"/>
+		<property name="weight" value="66"/>
+		<!-- hobby는 arraylist이기 때문에 value값에 넣을수가 없기 때문엥 <list>로 써야해 -->
+		<property name="hobby">
+			<list>
+				<value>수영</value>
+				<value>수면</value>
+				<value>개발</value>
+			</list>
+		</property>
+		<property name="bmiCalculator" ref="bmiCalculator"/> <!-- 다른 빈 객체 참조 -->
+	</bean>
+</beans>
