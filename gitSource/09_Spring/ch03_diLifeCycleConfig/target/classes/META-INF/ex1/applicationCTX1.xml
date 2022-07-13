@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+	<context:annotation-config/>
+	<!-- 매개변수 없는 생성자 함수가 없기 때문에 bean을 이렇게 만들면 오류가 남  -->
+	<!-- 	<bean id="student" class="com.lec.ch03.ex1.Student"></bean> -->
+	<bean id="student" class="com.lec.ch03.ex1.Student">
+		<constructor-arg value="홍길동"/>
+		<constructor-arg value="11"/>
+		<constructor-arg>
+			<list>
+				<value>코딩</value>
+				<value>개발</value>
+			</list>
+		</constructor-arg>
+		<property name="height" value="170"/>
+		<property name="weight" value="60"/>
+	</bean>
+	<bean id="studentInfo" class="com.lec.ch03.ex1.Studentinfo">
+		<!-- <property name="student" ref="student"/> -->
+		<!--  context:annotation-config 를 해주었기 때문에 빈만 만들어줘도됨 -->
+	</bean>
+</beans>
